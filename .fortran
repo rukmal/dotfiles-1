@@ -1,0 +1,1 @@
+alias gfort="gfortran -fdefault-real-8"
