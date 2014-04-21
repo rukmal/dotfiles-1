@@ -41,7 +41,7 @@ bind m:cmd,shift ${full}
 bind ,:cmd,shift undo
 bind j:cmd,alt,shift ${lefthalf}
 bind k:cmd,alt,shift ${righthalf}
-bind ;:cmd,alt,shift grid 1440x900:8,4 1366x768:8,4
+bind ;:cmd,alt,shift grid 1440x900:8,4 1920x1080:8,4
 
 bind p:cmd,alt,shift move screenOriginX+333;screenOriginY 1019;1024
 
@@ -50,3 +50,6 @@ bind 2:cmd,ctrl,alt,shift snapshot shotTwo save-to-disk
 bind 1:cmd,alt,shift activate-snapshot shotOne
 bind 2:cmd,alt,shift activate-snapshot shotTwo
 
+# For development where you need to create a 1280x800 window
+# alias smallmbp corner top-left resize:1280;800
+# bind ':cmd,alt,shift ${smallmbp}
