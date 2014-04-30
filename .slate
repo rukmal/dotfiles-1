@@ -12,7 +12,8 @@ alias hotkey ctrl;cmd
 
 #bind e:${hotkey} hint fjdksla;ghrueiwoqptyvncmx,z.
 
-alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+# alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias full corner top-left resize:screenSizeX;screenSizeY
 alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
 alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
 alias topleft corner top-left resize:screenSizeX/2;screenSizeY/2
@@ -41,14 +42,16 @@ bind m:cmd,shift ${full}
 bind ,:cmd,shift undo
 bind j:cmd,alt,shift ${lefthalf}
 bind k:cmd,alt,shift ${righthalf}
-bind ;:cmd,alt,shift grid 1440x900:8,4 1920x1080:8,4
+bind ;:cmd,alt,shift grid 1440x900:8,2 1920x1080:8,2
 
-bind p:cmd,alt,shift move screenOriginX+333;screenOriginY 1019;1024
+# bind p:cmd,alt,shift move screenOriginX+333;screenOriginY 1019;1024
 
-bind 1:cmd,ctrl,alt,shift snapshot shotOne save-to-disk
-bind 2:cmd,ctrl,alt,shift snapshot shotTwo save-to-disk
-bind 1:cmd,alt,shift activate-snapshot shotOne
-bind 2:cmd,alt,shift activate-snapshot shotTwo
+# bind 1:cmd,ctrl,alt,shift snapshot shotOne save-to-disk
+# bind 2:cmd,ctrl,alt,shift snapshot shotTwo save-to-disk
+# bind 1:cmd,alt,shift activate-snapshot shotOne
+# bind 2:cmd,alt,shift activate-snapshot shotTwo
+bind 1:cmd,alt,shift corner top-left resize:screenSizeX;screenSizeY 0
+bind 2:cmd,alt,shift corner top-left resize:screenSizeX;screenSizeY 1
 
 # For development where you need to create a 1280x800 window
 # alias smallmbp corner top-left resize:1280;800
