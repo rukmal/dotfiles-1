@@ -15,7 +15,7 @@ alias oldvenv='source venv/bin/activate'
 export PATH=/usr/local/share/npm/bin:$PATH
 
 # Fortan
-alias gf='/Users/christophersu/Code/LearningFortran/bash/compile_execute_save_output'
+source /Users/christophersu/.fortran
 
 # Git aliases (from @rukmal)
 #------------
@@ -41,6 +41,9 @@ gic () {
         git add -A
         git commit -m "$1"
 }
+
+# Mine:
+alias gil='git pull'
 
 # Misc
 PS1="csu:\W\$ "
