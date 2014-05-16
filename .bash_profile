@@ -1,3 +1,29 @@
+mkcd () {
+        mkdir "$1";
+        cd "$1";
+}
+# Because I can never remember aliases:
+mc () {
+        mkcd "$1";
+}
+mcd () {
+        mkcd "$1";
+}
+
+# HCR
+## My version of my_ip for Mac:
+function my_ip() {
+    MY_IP=$(ifconfig en0 | grep inet | grep -v inet6 | awk '{print $2}')
+    echo ${MY_IP:-"Not connected"}
+}
+
+function cloudrobot() {
+  unset ROBOT;
+  unset ROS_HOSTNAME;
+  export ROS_MASTER_URI=http://$1:11311
+  export ROS_IP=`my_ip`
+}
+
 ## android/firefox mobile
 # export PATH=$PATH:$HOME/oss/adt-bundle-mac/sdk/tools:$HOME/oss/adt-bundle-mac/sdk/build-tools:$HOME/oss/adt-bundle-mac/sdk/platform-tools
 
