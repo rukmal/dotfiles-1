@@ -161,6 +161,8 @@ export PS1
 export PATH="/Users/christophersu/anaconda/bin:$PATH"
 export UWHPSC="/Users/christophersu/SkyDrive/School/2014 Spring/AMATH 483/uwhpsc"
 export MYHPSC="/Users/christophersu/SkyDrive/School/2014 Spring/AMATH 483/amath583"
+alias uwhpsc='cd /Users/christophersu/SkyDrive/School/2014\ Spring/AMATH\ 483/uwhpsc'
+alias myhpsc='cd /Users/christophersu/SkyDrive/School/2014\ Spring/AMATH\ 483/amath583'
 
 # ==========================================
 # AWS
