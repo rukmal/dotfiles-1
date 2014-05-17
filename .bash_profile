@@ -82,6 +82,10 @@ alias gil='git pull'
 # ==========================================
 # Misc
 # ==========================================
+alias serv='python -m SimpleHTTPServer'
+alias serve='python -m SimpleHTTPServer'
+alias server='python -m SimpleHTTPServer'
+
 alias p='pwd'
 alias pc='pwd | pbcopy' # Copy current working directory to clipboard
 mkcd () {
