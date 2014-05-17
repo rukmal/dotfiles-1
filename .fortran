@@ -1,1 +1,20 @@
-alias gfort="gfortran -fdefault-real-8"
+gf () {
+    filename="$1"
+    gfortran $filename -fdefault-real-8 -o ${filename/%.*/.out}
+    ./${filename/%.*/.out} > ${filename/%.*/_output.txt}
+    cat ${filename/%.*/_output.txt}
+}
+
+gfmp () {
+    filename="$1"
+    gfortran $filename -fdefault-real-8 -fopenmp -o ${filename/%.*/.out}
+    ./${filename/%.*/.out} > ${filename/%.*/_output.txt}
+    cat ${filename/%.*/_output.txt}
+}
+
+gfomp () {
+    filename="$1"
+    gfortran $filename -fdefault-real-8 -fopenmp -o ${filename/%.*/.out}
+    ./${filename/%.*/.out} > ${filename/%.*/_output.txt}
+    cat ${filename/%.*/_output.txt}
+}
