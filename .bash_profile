@@ -1,16 +1,11 @@
-mkcd () {
-        mkdir "$1";
-        cd "$1";
-}
-# Because I can never remember aliases:
-mc () {
-        mkcd "$1";
-}
-mcd () {
-        mkcd "$1";
-}
+# sources
+# ==========================================
+source ~/.profile # Get the paths
+source ~/.bashrc  # get aliases
+
 
 # HCR
+# ==========================================
 ## My version of my_ip for Mac:
 function my_ip() {
     MY_IP=$(ifconfig en0 | grep inet | grep -v inet6 | awk '{print $2}')
@@ -24,10 +19,12 @@ function cloudrobot() {
   export ROS_IP=`my_ip`
 }
 
-## android/firefox mobile
+# android/firefox mobile
+# # ==========================================
 # export PATH=$PATH:$HOME/oss/adt-bundle-mac/sdk/tools:$HOME/oss/adt-bundle-mac/sdk/build-tools:$HOME/oss/adt-bundle-mac/sdk/platform-tools
 
 # Ruby
+# ==========================================
 source /Users/christophersu/.rvm/scripts/rvm
 
 # Python
@@ -38,13 +35,15 @@ alias oldmakevenv='virtualenv --distribute venv'
 alias oldvenv='source venv/bin/activate'
 
 # Node
+# ==========================================
 export PATH=/usr/local/share/npm/bin:$PATH
 
 # Fortan
+# ==========================================
 source /Users/christophersu/.fortran
 
 # Git aliases (from @rukmal)
-#------------
+# ==========================================
 alias gif='git fetch'
 alias gis='git status'
 alias gid='git diff'
@@ -68,19 +67,28 @@ gic () {
         git commit -m "$1"
 }
 
-# Mine:
+## Mine:
 alias gil='git pull'
 
 # Misc
-PS1="csu:\W\$ "
-
-# AMATH 583
-export PATH="/Users/christophersu/anaconda/bin:$PATH"
-export UWHPSC="/Users/christophersu/SkyDrive/School/2014 Spring/AMATH 483/uwhpsc"
-export MYHPSC="/Users/christophersu/SkyDrive/School/2014 Spring/AMATH 483/amath583"
+# ==========================================
+alias p='pwd'
+alias pc='pwd | pbcopy' # Copy current working directory to clipboard
+mkcd () {
+        mkdir "$1";
+        cd "$1";
+}
+## Because I can never remember aliases:
+mc () {
+        mkcd "$1";
+}
+mcd () {
+        mkcd "$1";
+}
  
 ## Use a long listing format ##
 alias ll='ls -la'
+alias sl='ls'
  
 ## Show hidden files ##
 alias l.='ls -d .* --color=auto'
@@ -106,29 +114,49 @@ function extract () {
         fi
 }
 
-### My stuff (old)
-# export PATH=/Users/christophersu/Code/bin:/usr/local/bin:$PATH
-
 # Tell ls to be colourful
-export CLICOLOR=1
 export LSCOLORS=Exfxcxdxbxegedabagacad
 
 # Tell grep to highlight matches
 export GREP_OPTIONS='--color=auto'
 
-echo 'source "`brew --prefix grc`/etc/grc.bashrc"' >> ~/.bash_profilesource "`brew --prefix grc`/etc/grc.bashrc"
+# PS1
+# ==========================================
+## Function to get the current git branch
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
 
-source ~/.profile # Get the paths
-source ~/.bashrc  # get aliases
-export PATH=/Applications/B1FreeArchiver.app/Contents/MacOS:$PATH
+## Colors
+export CLICOLOR=1
+RED="\[\033[1;31m\]"
+BLUE="\[\033[0;34m\]"
+LIGHT_GRAY="\[\033[0;37m\]"
+CYAN="\[\033[0;36m\]"
+LIGHT_CYAN="\[\033[1;36m\]"
+NO_COLOR="\[\033[0m\]"
 
-# added by Anaconda 1.9.1 installer
-# export PATH="/Users/christophersu/anaconda/bin:$PATH"
+## Actual PS1
+PS1="\[$NO_COLOR\]csu:\W\[$BLUE\]\$(parse_git_branch)\[$NO_COLOR\]\$ "
+export PS1
 
-export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
+# AMATH 583
+# ==========================================
+export PATH="/Users/christophersu/anaconda/bin:$PATH"
+export UWHPSC="/Users/christophersu/SkyDrive/School/2014 Spring/AMATH 483/uwhpsc"
+export MYHPSC="/Users/christophersu/SkyDrive/School/2014 Spring/AMATH 483/amath583"
 
 # AWS
+# ==========================================
 export JAVA_HOME=$(/usr/libexec/java_home)
 export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.6.13.0
 export PATH=$PATH:$EC2_HOME/bin
 source ~/.aws_secret # get AWS secrets
+
+# Automatically added
+# ==========================================
+echo 'source "`brew --prefix grc`/etc/grc.bashrc"' >> ~/.bash_profilesource "`brew --prefix grc`/etc/grc.bashrc"
+export PATH=/Applications/B1FreeArchiver.app/Contents/MacOS:$PATH
+# added by Anaconda 1.9.1 installer
+# export PATH="/Users/christophersu/anaconda/bin:$PATH"
+export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
