@@ -120,22 +120,38 @@ echo "Current IP:"; my_ip
 # ROS related stuff 
 
 # source /home/christophersu/rosbuild_ws/setup.bash
-source /opt/ros/groovy/setup.bash
 source ~/catkin_ws/devel/setup.bash
 export ROS_PACKAGE_PATH=~/rosbuild_ws/:~/catkin_ws/:$ROS_PACKAGE_PATH
-export ROS_HOSTNAME=localhost
-export ROS_MASTER_URI=http://localhost:11311
-export ROBOT=sim
+source ~/catkin_ws/devel/setup.bash
+export ROS_PACKAGE_PATH=~/catkin_ws/:$ROS_PACKAGE_PATH
+export ROS_ENV_LOADER=/etc/ros/groovy/env.sh
 
-alias realrobot="unset ROBOT; unset ROS_HOSTNAME; export ROS_MASTER_URI=http://c1:11311; export ROS_IP=$MY_IP"
+export ROS_HOSTNAME=localhost # Optional, the name of this computer.
+export ROS_MASTER_URI=http://localhost:11311 # The location of the ROS master.
+export ROBOT=sim # The type of robot.
 
-function hostrobot() {
-  export ROS_HOSTNAME=unimate
-  export ROS_MASTER_URI=http://unimate:11311
-  export DISPLAY=:0
-  export ROS_IP=`my_ip`
-  export ROBOT=sim
+# Get IP address on ethernet
+# If you're on a laptop, change eth0 to wlan0
+function my_ip() {
+    MY_IP=$(/sbin/ifconfig eth0 | awk '/inet/ { print $2 } ' | sed -e s/addr://)
+    echo ${MY_IP:-"Not connected"}
 }
+
+# Allows you to connect to Rosie
+function realrobot() {
+  unset ROBOT;
+  unset ROS_HOSTNAME;
+  export ROS_MASTER_URI=http://c1:11311;
+  export ROS_IP=`my_ip`;
+}
+
+# Undo the effect of realrobot. 
+function simrobot() {
+  export ROS_HOSTNAME=localhost;
+  export ROS_MASTER_URI=http://localhost:11311;
+  export ROBOT=sim;
+}
+
 
 alias makevenv='virtualenv --distribute env'
 alias venv='source env/bin/activate'
@@ -189,7 +205,3 @@ function extract () {
 }
 
 export GREP_OPTIONS='--color=auto'
-
-source ~/catkin_ws/devel/setup.bash
-export ROS_PACKAGE_PATH=~/catkin_ws/:$ROS_PACKAGE_PATH
-export ROS_ENV_LOADER=/etc/ros/groovy/env.sh
