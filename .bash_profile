@@ -94,8 +94,13 @@ gin () {
 
 # Change the origin remote of the repo
 gir () {
-    git remote rm origin
-    git remote add origin "$1"
+    if [ "$#" -eq  1 ]; then
+        git remote rm origin
+        git remote add origin "$1"
+    else
+        git remote rm "$1"
+        git remote add "$1" "$2"
+    fi
 }
 
 
