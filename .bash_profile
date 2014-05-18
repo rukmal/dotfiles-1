@@ -45,6 +45,8 @@ alias oldvenv='source venv/bin/activate'
 # ==========================================
 export PATH=/usr/local/share/npm/bin:$PATH
 
+alias npmsave='npm update --save'
+
 # ==========================================
 # Fortan
 # ==========================================
@@ -88,6 +90,12 @@ gin () {
     hub init "$1"
     cd "$1"
     hub create "$1"
+}
+
+# Change the origin remote of the repo
+gir () {
+    git remote rm origin
+    git remote add origin "$1"
 }
 
 
