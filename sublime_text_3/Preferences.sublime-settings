@@ -1,0 +1,47 @@
+{
+	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace",
+		"*.mod"
+	],
+	"font_face": "Source Code Pro",
+	"font_size": 16.0,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Markdown",
+		"Vintage",
+		"Theme - Phoenix",
+		"Theme - Soda"
+	],
+	"line_numbers": true,
+	"spacegray_sidebar_font_large": 15.0,
+	"spacegray_sidebar_font_normal": 14.0,
+	"spacegray_sidebar_font_small": 13.0,
+	"spacegray_sidebar_font_xlarge": 16.0,
+	"tab_size": 4,
+	// "theme": "Spacegray.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": false,
+	"word_separators": "./\\()\"'-:,.;<>~!@#%^&*|+=[]{}`~?"
+}
