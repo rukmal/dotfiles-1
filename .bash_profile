@@ -51,8 +51,9 @@ export PATH=/usr/local/share/npm/bin:$PATH
 source /Users/christophersu/.fortran
 
 # ==========================================
-# Git aliases (from @rukmal)
+# Git
 # ==========================================
+## From @rukmal
 alias gif='git fetch'
 alias gis='git status'
 alias gid='git diff'
@@ -63,21 +64,30 @@ alias gih='git push heroku master'
 # Note: Commits ALL files in working directory.
 # Usage: gip [commit message] [branch to be push to]
 gip () {
-        git add -A
-        git commit -m "$1";
-        git push origin $2;
+    git add -A
+    git commit -m "$1";
+    git push origin $2;
 }
 
 # Function for git add and commit
 # Note: Commits ALL files in working directory.
 # Usage: gic [commit message]
 gic () {
-        git add -A
-        git commit -m "$1"
+    git add -A
+    git commit -m "$1"
 }
 
 ## Mine:
 alias gil='git pull'
+
+# Create a new git repo locally and on GitHub
+# Usage: gin [name of repository and name for GitHub repo]
+gin () {
+    hub init "$1"
+    cd "$1"
+    hub create "$1"
+}
+
 
 # ==========================================
 # Misc
