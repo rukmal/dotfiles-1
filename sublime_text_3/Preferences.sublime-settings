@@ -40,7 +40,6 @@
 	"spacegray_sidebar_font_small": 13.0,
 	"spacegray_sidebar_font_xlarge": 16.0,
 	"tab_size": 4,
-	// "theme": "Spacegray.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": false,
 	"word_separators": "./\\()\"'-:,.;<>~!@#%^&*|+=[]{}`~?"
