@@ -177,7 +177,13 @@ LIGHT_CYAN="\[\033[1;36m\]"
 NO_COLOR="\[\033[0m\]"
 
 ## Actual PS1
-PS1="\[$NO_COLOR\]csu:\W\[$BLUE\]\$(parse_git_branch)\[$NO_COLOR\]\$ "
+# PS1="$NO_COLOR"
+# PS1+="csu:\W"
+# PS1+="$BLUE"
+# PS1+="\$(parse_git_branch)"
+# PS1+="$NO_COLOR"
+# PS1+="$ "
+PS1="\[\033[0m\]csu:\W\[\033[0;34m\]\$(parse_git_branch)\[\033[0m\]$ "
 export PS1
 
 # ==========================================
