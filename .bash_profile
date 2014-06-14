@@ -32,6 +32,16 @@ function cloudrobot() {
 source /Users/christophersu/.rvm/scripts/rvm
 
 # ==========================================
+# Java
+# ==========================================
+j () {
+    javac $1.java
+    java $1
+}
+alias ja='j'
+alias jav='j'
+
+# ==========================================
 # Python
 # ==========================================
 alias makevenv='virtualenv --distribute env'
@@ -206,7 +216,8 @@ source ~/.aws_secret # get AWS secrets
 # ==========================================
 # Automatically added
 # ==========================================
-echo 'source "`brew --prefix grc`/etc/grc.bashrc"' >> ~/.bash_profilesource "`brew --prefix grc`/etc/grc.bashrc"
+### vvv disabled brew because Yosemite broke Ruby which broke it vvv
+# echo 'source "`brew --prefix grc`/etc/grc.bashrc"' >> ~/.bash_profilesource "`brew --prefix grc`/etc/grc.bashrc"
 export PATH=/Applications/B1FreeArchiver.app/Contents/MacOS:$PATH
 # added by Anaconda 1.9.1 installer
 # export PATH="/Users/christophersu/anaconda/bin:$PATH"
