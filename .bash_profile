@@ -63,6 +63,11 @@ alias npmsave='npm update --save'
 source /Users/christophersu/.fortran
 
 # ==========================================
+# MongoDB
+# ==========================================
+alias mongod='mongod --dbpath data/'
+
+# ==========================================
 # Git
 # ==========================================
 ## From @rukmal
