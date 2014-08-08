@@ -4,7 +4,6 @@
 source ~/.profile # Get the paths
 source ~/.bashrc  # get aliases
 
-
 # ==========================================
 # HCR
 # ==========================================
@@ -29,7 +28,6 @@ function cloudrobot() {
 # ==========================================
 # Ruby
 # ==========================================
-source /Users/christophersu/.rvm/scripts/rvm
 
 # ==========================================
 # Java
@@ -49,6 +47,10 @@ alias startvenv='virtualenv --distribute env'
 alias venv='source env/bin/activate'
 alias oldmakevenv='virtualenv --distribute venv'
 alias oldvenv='source venv/bin/activate'
+
+alias pypiupdate='python setup.py sdist upload'
+alias pypiupgrade='python setup.py sdist upload'
+alias pypiupload='python setup.py sdist upload'
 
 # ==========================================
 # Node
@@ -121,7 +123,6 @@ gir () {
 gim () {
     git merge "$1"
 }
-
 
 # ==========================================
 # Misc
@@ -231,3 +232,5 @@ export PATH=/Applications/B1FreeArchiver.app/Contents/MacOS:$PATH
 # added by Anaconda 1.9.1 installer
 # export PATH="/Users/christophersu/anaconda/bin:$PATH"
 export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
