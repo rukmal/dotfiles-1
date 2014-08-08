@@ -52,6 +52,10 @@ alias pypiupdate='python setup.py sdist upload'
 alias pypiupgrade='python setup.py sdist upload'
 alias pypiupload='python setup.py sdist upload'
 
+pipupdate () {
+    pip uninstall "$1" && pip install "$1" && pip freeze > requirements.txt
+}
+
 # ==========================================
 # Node
 # ==========================================
