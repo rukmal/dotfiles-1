@@ -105,6 +105,13 @@ alias gil='git pull'
 alias gipset='git push --set-upstream origin master'
 alias setgip='git push --set-upstream origin master'
 
+giph () {
+    git add -A
+    git commit -m "$1";
+    git push origin $2;
+    git push heroku master
+}
+
 # Create a new git repo locally and on GitHub
 # Usage: gin [name of repository and name for GitHub repo]
 gin () {
