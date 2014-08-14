@@ -1,4 +1,4 @@
-.PHONY: bashrc bash_profile fortran slate vim atom sublime
+.PHONY: bashrc bash_profile fortran slate vim atom sublime vim_windows git
 
 bashrc:
 	rm .bashrc
