@@ -37,3 +37,5 @@ vim_windows:
 git:
 	rm .gitconfig
 	cp ~/.gitconfig .
+	rm .gitignore_global
+	cp ~/.gitignore_global .
