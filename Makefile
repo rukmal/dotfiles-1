@@ -33,3 +33,7 @@ vim_windows:
 	cp -rf "C:\Program Files (x86)\Vim\vimfiles" .
 	rm _vimrc
 	cp ~/.vimrc _vimrc
+
+git:
+	rm .gitconfig
+	cp ~/.gitconfig .
