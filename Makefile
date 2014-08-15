@@ -17,8 +17,8 @@ slate:
 	cp -rf /Users/christophersu/.slate .
 
 vim:
-	rm -rf vim
-	cp -rf /Users/christophersu/.vim .
+	rm -rf .vimrc
+	cp /Users/christophersu/.vimrc .
 
 atom:
 	rm -rf atom
