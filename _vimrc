@@ -43,7 +43,7 @@ colorscheme base16-ocean
     " Dark
         " base16-ocean
 
-set wildignore+=*.o,*~,*.pyc
+set wildignore+=*.o,*~,*.pyc,*/env/*,*/.git/*
 
 " Mac OS X / Linux
 " set wildignore+=*/tmp/*,*.so,*.swp,*.zip
