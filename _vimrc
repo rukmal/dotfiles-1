@@ -47,11 +47,20 @@ set wildignore+=*.o,*~,*.pyc,*/env/*,*/.git/*
 
 " Mac OS X / Linux
 " set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-" let g:ctrlp_user_command = 'find %s -type f
+" let g:ctrlp_user_command = 'find %s -type f'
 
 " Windows
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
 let g:ctrlp_user_command = 'dir %s /-n /b /s /a-d'
+
+" tabs
+" tab navigation like firefox
+nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+inoremap <C-tab>   <Esc>:tabnext<CR>i
+inoremap <C-t>     <Esc>:tabnew<CR>
 
 " ctrlp
 let g:ctrlp_map = '<c-p>'
@@ -60,7 +69,11 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " nerdtree
 let NERDTreeIgnore = ['\.pyc$']
+let g:NERDTreeWinSize = 20
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" autocmd BufEnter * NERDTreeMirror " open for new tabs
 
 " gundo
 nnoremap <F5> :GundoToggle<CR>
-
