@@ -27,16 +27,15 @@ atom:
 sublime:
 	rm -rf sublime_text_3
 	cp -rf /Users/christophersu/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ./sublime_text_3
-
-vim_windows:
-	rm _vimrc
-	cp ~/.vimrc _vimrc
-
 git:
 	rm .gitconfig
 	cp ~/.gitconfig .
 	rm .gitignore_global
 	cp ~/.gitignore_global .
+
+vim_windows:
+	rm _vimrc
+	cp ~/.vimrc _vimrc
 
 win_keys:
 	rm win_keys.ahk
