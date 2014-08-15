@@ -42,4 +42,4 @@ git:
 
 win_keys:
 	rm win_keys.ahk
-	cp "C:\Users\chrissu\Desktop\Remap Keys.ahk" .
+	cp "C:\Users\chrissu\Desktop\Remap Keys.ahk" win_keys.ahk
