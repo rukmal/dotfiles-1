@@ -39,3 +39,7 @@ git:
 	cp ~/.gitconfig .
 	rm .gitignore_global
 	cp ~/.gitignore_global .
+
+win_keys:
+	rm win_keys.ahk
+	cp "C:\Users\chrissu\Desktop\Remap Keys.ahk" .
