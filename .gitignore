@@ -3,3 +3,4 @@
 */storage/*
 *cache*
 vim/bundle/gundo
+*.netrwhist*
