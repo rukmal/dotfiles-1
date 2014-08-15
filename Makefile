@@ -29,8 +29,6 @@ sublime:
 	cp -rf /Users/christophersu/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ./sublime_text_3
 
 vim_windows:
-	rm -rf vimfiles
-	cp -rf "C:\Program Files (x86)\Vim\vimfiles" .
 	rm _vimrc
 	cp ~/.vimrc _vimrc
 
