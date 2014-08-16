@@ -8,16 +8,40 @@ source ~/.bashrc  # get aliases
 # HCR
 # ==========================================
 ## My version of my_ip for Mac:
-function my_ip() {
-    MY_IP=$(ifconfig en0 | grep inet | grep -v inet6 | awk '{print $2}')
-    echo ${MY_IP:-"Not connected"}
-}
+# function my_ip() {
+#    MY_IP=$(ifconfig en0 | grep inet | grep -v inet6 | awk '{print $2}')
+#    echo ${MY_IP:-"Not connected"}
+#}
+#
+#function cloudrobot() {
+#  unset ROBOT;
+#  unset ROS_HOSTNAME;
+#  export ROS_MASTER_URI=http://$1:11311
+#  export ROS_IP=`my_ip`
+#}
 
-function cloudrobot() {
-  unset ROBOT;
-  unset ROS_HOSTNAME;
-  export ROS_MASTER_URI=http://$1:11311
-  export ROS_IP=`my_ip`
+# ==========================================
+# Text Editing
+# ==========================================
+alias v='mvim' # v to MacVim
+alias vi='mvim' # vi to MacVim
+alias mvi='mvim' # mvi to MacVim
+
+function note() {
+    if [ -z "$1" ]
+    then
+        local title=$(date +%Y-%m-%d)
+    else
+        local title=$1
+    fi
+    if [ -z "$2" ]
+    then
+        geeknote create --title "$title"
+        geeknote edit --note "$title" --content "WRITE"
+    else
+        geeknote create --title "$title" --notebook "$2"
+        geeknote edit --note "$title" --content "WRITE" --notebook "$2"
+    fi
 }
 
 # # ==========================================
