@@ -86,6 +86,8 @@ pipupdate () {
 export PATH=/usr/local/share/npm/bin:$PATH
 
 alias npmsave='npm update --save'
+alias setgulp='npm init && npm install --save-dev gulp'
+alias gulpinit='npm init && npm install --save-dev gulp'
 
 # ==========================================
 # Fortan
