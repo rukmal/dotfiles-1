@@ -44,6 +44,8 @@ function note() {
     fi
 }
 
+alias resume='cd ~/SkyDrive/Career/Resume/Pages && make resume'
+
 # # ==========================================
 # Android/Firefox mobile
 # # ==========================================
