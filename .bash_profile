@@ -187,6 +187,7 @@ mcd () {
 ## Use a long listing format ##
 alias ll='ls -la'
 alias sl='ls'
+alias la='ls -a'
  
 ## Show hidden files ##
 alias l.='ls -d .* --color=auto'
