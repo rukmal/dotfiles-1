@@ -1,12 +1,15 @@
-.PHONY: bashrc bash_profile fortran slate vim atom sublime vim_windows git
+.PHONY: bashrc bash_profile fortran slate vim atom sublime vim_windows git load_bash_profile
 
 bashrc:
 	rm .bashrc
-	cp -rf /Users/christophersu/.bashrc .
+	cp /Users/christophersu/.bashrc .
 
 bash_profile:
 	rm .bash_profile
-	cp -rf /Users/christophersu/.bash_profile .
+	cp /Users/christophersu/.bash_profile .
+
+load_bash_profile:
+	cp .bash_profile ~
 
 fortran:
 	rm .fortran
