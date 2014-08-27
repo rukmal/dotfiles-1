@@ -8,6 +8,9 @@ bash_profile:
 	rm .bash_profile
 	cp /Users/christophersu/.bash_profile .
 
+load_bashrc:
+	cp .bashrc ~
+
 load_bash_profile:
 	cp .bash_profile ~
 
