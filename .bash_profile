@@ -26,6 +26,7 @@ source ~/.bashrc  # get aliases
 alias v='mvim' # v to MacVim
 alias vi='mvim' # vi to MacVim
 alias mvi='mvim' # mvi to MacVim
+#alias gvim='mvim' # seems to not need an alias
 
 function note() {
     if [ -z "$1" ]
