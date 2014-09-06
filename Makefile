@@ -30,6 +30,9 @@ vimrc:
 	rm -rf .vimrc
 	cp /Users/christophersu/.vimrc .
 
+load_vimrc:
+	cp .vimrc ~
+
 atom:
 	rm -rf atom
 	cp -rf /Users/christophersu/.atom .
