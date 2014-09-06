@@ -26,6 +26,10 @@ vim:
 	rm -rf .vimrc
 	cp /Users/christophersu/.vimrc .
 
+vimrc:
+	rm -rf .vimrc
+	cp /Users/christophersu/.vimrc .
+
 atom:
 	rm -rf atom
 	cp -rf /Users/christophersu/.atom .
