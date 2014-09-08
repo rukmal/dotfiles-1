@@ -6,3 +6,4 @@ My configurations for:
 * Atom
 * Bash
 * Sublime
+* Windows (e.g. AutoHotkey)
