@@ -26,9 +26,12 @@ vim:
 	rm -rf .vimrc
 	cp /Users/christophersu/.vimrc .
 
-vimrc:
+vimr:
 	rm -rf .vimrc
 	cp /Users/christophersu/.vimrc .
+
+load_vim:
+	cp .vim ~
 
 load_vimrc:
 	cp .vimrc ~
