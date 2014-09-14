@@ -7,3 +7,4 @@ My configurations for:
 * Bash
 * Sublime
 * Windows (e.g. AutoHotkey)
+* Mac (system configuration)
