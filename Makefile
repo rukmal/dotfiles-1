@@ -53,6 +53,7 @@ vim_windows:
 	rm _vimrc
 	cp ~/.vimrc _vimrc
 
-win_keys:
-	rm win_keys.ahk
-	cp "C:\Users\chrissu\Desktop\Remap Keys.ahk" win_keys.ahk
+# win_keys:
+# 	rm win_keys.ahk
+# 	cp "C:\Users\chrissu\Desktop\Remap Keys.ahk" win_keys.ahk
+	
