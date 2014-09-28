@@ -175,6 +175,8 @@ alias serv='python -m SimpleHTTPServer'
 alias serve='python -m SimpleHTTPServer'
 alias server='python -m SimpleHTTPServer'
 
+alias reload='source ~/.bash_profile'
+
 ## Because I can never remember aliases:
 mc () {
         mkcd "$1";
@@ -242,7 +244,15 @@ NO_COLOR="\[\033[0m\]"
 # PS1+="\$(parse_git_branch)"
 # PS1+="$NO_COLOR"
 # PS1+="$ "
-PS1="\[\033[0m\]csu:\W\[\033[0;34m\]\$(parse_git_branch)\[\033[0m\]$ "
+
+host=$(hostname)
+if [ $host != christophersu.local ]
+then
+    PS1="\[\033[0m\]\u@\h:\W\[\033[0;34m\]\$(parse_git_branch)\[\033[0m\]$ "
+else
+    PS1="\[\033[0m\]csu:\W\[\033[0;34m\]\$(parse_git_branch)\[\033[0m\]$ "
+fi
+
 export PS1
 
 # ==========================================
