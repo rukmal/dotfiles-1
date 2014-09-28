@@ -264,8 +264,8 @@ function mkcd() {
 alias path='echo -e ${PATH//:/\\n}'
 
 # Common directories
-alias code='cd ~/Code'
-alias dotfiles='cd ~/Code/dotfiles'
+alias code='cd ~/code'
+alias dotfiles='cd ~/code/dotfiles'
 alias dropbox='cd ~/Dropbox'
 alias host='vim ~/etc/hosts'
 
