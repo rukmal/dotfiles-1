@@ -180,11 +180,11 @@ alias reload='source ~/.bash_profile'
 
 ## Because I can never remember aliases:
 function mc() {
-        mkcd "$1";
+    mkcd "$1";
 }
 
 function mcd() {
-        mkcd "$1";
+    mkcd "$1";
 }
  
 ## Use a long listing format ##
