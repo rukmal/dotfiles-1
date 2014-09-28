@@ -2,25 +2,16 @@ if [ -f /etc/bashrc ]; then
   . /etc/bashrc
 fi
 
+# ==========================================
+# School
+# ==========================================
 if [ -f ~/.uwcse ]; then
     source ~/.uwcse
 fi
 
-# ==========================================
-# HCR
-# ==========================================
-## My version of my_ip for Mac:
-# function my_ip() {
-#    MY_IP=$(ifconfig en0 | grep inet | grep -v inet6 | awk '{print $2}')
-#    echo ${MY_IP:-"Not connected"}
-#}
-#
-#function cloudrobot() {
-#  unset ROBOT;
-#  unset ROS_HOSTNAME;
-#  export ROS_MASTER_URI=http://$1:11311
-#  export ROS_IP=`my_ip`
-#}
+if [ -f ~/.school ]; then
+    source ~/.school
+fi
 
 # ==========================================
 # Text Editing
@@ -50,14 +41,10 @@ alias mvi='mvim' # mvi to MacVim
 
 alias resume='cd ~/OneDrive/Career/Resume/Pages && make resume'
 
-# # ==========================================
+# ==========================================
 # Android/Firefox mobile
-# # ==========================================
+# ==========================================
 # export PATH=$PATH:$HOME/oss/adt-bundle-mac/sdk/tools:$HOME/oss/adt-bundle-mac/sdk/build-tools:$HOME/oss/adt-bundle-mac/sdk/platform-tools
-
-# ==========================================
-# Ruby
-# ==========================================
 
 # ==========================================
 # Java
@@ -256,15 +243,6 @@ else
 fi
 
 export PS1
-
-# ==========================================
-# AMATH 583
-# ==========================================
-export PATH="/Users/christophersu/anaconda/bin:$PATH"
-# export UWHPSC="/Users/christophersu/OneDrive/School/2014 Spring/AMATH 483/uwhpsc"
-# export MYHPSC="/Users/christophersu/OneDrive/School/2014 Spring/AMATH 483/amath583"
-# alias uwhpsc='cd /Users/christophersu/OneDrive/School/2014\ Spring/AMATH\ 483/uwhpsc'
-# alias myhpsc='cd /Users/christophersu/OneDrive/School/2014\ Spring/AMATH\ 483/amath583'
 
 # ==========================================
 # Navigation

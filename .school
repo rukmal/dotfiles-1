@@ -1,0 +1,30 @@
+alias 14au='cd ~/school/14au'
+alias 311='cd ~/school/14au/cse311'
+alias 351='cd ~/school/14au/cse351'
+alias 390a='cd ~/school/14au/cse390a'
+alias 490a='cd ~/school/14au/cse490a'
+
+# ==========================================
+# AMATH 583
+# ==========================================
+## export PATH="/Users/christophersu/anaconda/bin:$PATH"
+# export UWHPSC="/Users/christophersu/OneDrive/School/2014 Spring/AMATH 483/uwhpsc"
+# export MYHPSC="/Users/christophersu/OneDrive/School/2014 Spring/AMATH 483/amath583"
+# alias uwhpsc='cd /Users/christophersu/OneDrive/School/2014\ Spring/AMATH\ 483/uwhpsc'
+# alias myhpsc='cd /Users/christophersu/OneDrive/School/2014\ Spring/AMATH\ 483/amath583'
+
+# ==========================================
+# HCR Lab
+# ==========================================
+## My version of my_ip for Mac:
+# function my_ip() {
+#    MY_IP=$(ifconfig en0 | grep inet | grep -v inet6 | awk '{print $2}')
+#    echo ${MY_IP:-"Not connected"}
+#}
+#
+#function cloudrobot() {
+#  unset ROBOT;
+#  unset ROS_HOSTNAME;
+#  export ROS_MASTER_URI=http://$1:11311
+#  export ROS_IP=`my_ip`
+#}
