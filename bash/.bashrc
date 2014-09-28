@@ -62,7 +62,7 @@ alias resume='cd ~/OneDrive/Career/Resume/Pages && make resume'
 # ==========================================
 # Java
 # ==========================================
-j () {
+function j() {
     javac $1.java
     java $1
 }
@@ -82,7 +82,7 @@ alias pypiupdate='python setup.py sdist upload'
 alias pypiupgrade='python setup.py sdist upload'
 alias pypiupload='python setup.py sdist upload'
 
-pipupdate () {
+function pipupdate() {
     pip uninstall "$1" && pip install "$1" && pip freeze > requirements.txt
 }
 
@@ -120,7 +120,7 @@ alias gih='git push heroku master'
 # Function for git add, commit and push
 # Note: Commits ALL files in working directory.
 # Usage: gip [commit message] [branch to be push to]
-gip () {
+function gip() {
     git add -A
     git commit -m "$1";
     git push origin $2;
@@ -129,7 +129,7 @@ gip () {
 # Function for git add and commit
 # Note: Commits ALL files in working directory.
 # Usage: gic [commit message]
-gic () {
+function gic() {
     git add -A
     git commit -m "$1"
 }
@@ -139,7 +139,7 @@ alias gil='git pull'
 alias gipset='git push --set-upstream origin master'
 alias setgip='git push --set-upstream origin master'
 
-giph () {
+function giph() {
     git add -A
     git commit -m "$1";
     git push origin $2;
@@ -148,14 +148,14 @@ giph () {
 
 # Create a new git repo locally and on GitHub
 # Usage: gin [name of repository and name for GitHub repo]
-gin () {
+function gin() {
     hub init "$1"
     cd "$1"
     hub create "$1"
 }
 
 # Change the origin remote of the repo
-gir () {
+function gir() {
     if [ "$#" -eq  1 ]; then
         git remote rm origin
         git remote add origin "$1"
@@ -165,7 +165,7 @@ gir () {
     fi
 }
 
-gim () {
+function gim() {
     git merge "$1"
 }
 
@@ -179,10 +179,11 @@ alias server='python -m SimpleHTTPServer'
 alias reload='source ~/.bash_profile'
 
 ## Because I can never remember aliases:
-mc () {
+function mc() {
         mkcd "$1";
 }
-mcd () {
+
+function mcd() {
         mkcd "$1";
 }
  
@@ -195,7 +196,7 @@ alias la='ls -a'
 alias l.='ls -d .* --color=auto'
 alias mkdir='mkdir -pv'
 
-function extract () {
+function extract() {
         if [ -f $1 ] ; then
                 case $1 in
                         *.tar.bz2)      tar xjf $1              ;;
@@ -225,7 +226,7 @@ export GREP_OPTIONS='--color=auto'
 # PS1
 # ==========================================
 ## Function to get the current git branch
-parse_git_branch() {
+function parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
@@ -276,7 +277,7 @@ alias ~='cd ~'
 
 alias p='pwd'
 alias pc='pwd | pbcopy' # Copy current working directory to clipboard
-mkcd () {
+function mkcd() {
         mkdir "$1";
         cd "$1";
 }
