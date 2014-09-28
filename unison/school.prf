@@ -1,0 +1,14 @@
+# Roots of the synchronization
+root = /Users/christophersu/Dropbox/school
+root = ssh://csu@attu2.cs.washington.edu/school
+
+# Paths to synchronize 
+path = 14au
+
+# Some regexps specifying names and paths to ignore
+ignore = Name temp.*
+ignore = Name *~
+ignore = Name .*~
+ignore = Name *.o
+ignore = Name *.tmp
+ignore = Name .DS_Store

@@ -4,6 +4,9 @@ load_bash:
 	cp bash/.bashrc ~
 	cp bash/.bash_profile ~
 
+unison:
+	cp -rf ~/.unison unison
+
 bashrc:
 	cp ~/.bashrc bash/
 
