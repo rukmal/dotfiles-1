@@ -30,22 +30,23 @@ alias vi='mvim' # vi to MacVim
 alias mvi='mvim' # mvi to MacVim
 #alias gvim='mvim' # seems to not need an alias
 
-function note() {
-    if [ -z "$1" ]
-    then
-        local title=$(date +%Y-%m-%d)
-    else
-        local title=$1
-    fi
-    if [ -z "$2" ]
-    then
-        geeknote create --title "$title"
-        geeknote edit --note "$title" --content "WRITE"
-    else
-        geeknote create --title "$title" --notebook "$2"
-        geeknote edit --note "$title" --content "WRITE" --notebook "$2"
-    fi
-}
+## Evernote
+# function note() {
+#     if [ -z "$1" ]
+#     then
+#         local title=$(date +%Y-%m-%d)
+#     else
+#         local title=$1
+#     fi
+#     if [ -z "$2" ]
+#     then
+#         geeknote create --title "$title"
+#         geeknote edit --note "$title" --content "WRITE"
+#     else
+#         geeknote create --title "$title" --notebook "$2"
+#         geeknote edit --note "$title" --content "WRITE" --notebook "$2"
+#     fi
+# }
 
 alias resume='cd ~/OneDrive/Career/Resume/Pages && make resume'
 
@@ -259,10 +260,10 @@ export PS1
 # AMATH 583
 # ==========================================
 export PATH="/Users/christophersu/anaconda/bin:$PATH"
-# export UWHPSC="/Users/christophersu/SkyDrive/School/2014 Spring/AMATH 483/uwhpsc"
-# export MYHPSC="/Users/christophersu/SkyDrive/School/2014 Spring/AMATH 483/amath583"
-# alias uwhpsc='cd /Users/christophersu/SkyDrive/School/2014\ Spring/AMATH\ 483/uwhpsc'
-# alias myhpsc='cd /Users/christophersu/SkyDrive/School/2014\ Spring/AMATH\ 483/amath583'
+# export UWHPSC="/Users/christophersu/OneDrive/School/2014 Spring/AMATH 483/uwhpsc"
+# export MYHPSC="/Users/christophersu/OneDrive/School/2014 Spring/AMATH 483/amath583"
+# alias uwhpsc='cd /Users/christophersu/OneDrive/School/2014\ Spring/AMATH\ 483/uwhpsc'
+# alias myhpsc='cd /Users/christophersu/OneDrive/School/2014\ Spring/AMATH\ 483/amath583'
 
 # ==========================================
 # Navigation
