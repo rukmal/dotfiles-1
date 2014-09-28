@@ -1,11 +1,11 @@
-.PHONY: bashrc bash_profile fortran slate vim atom sublime vim_windows git load_bash_profile load_bash
+.PHONY: bashrc bash_profile fortran slate vim atom sublime vim_windows git load_bash_profile load_bash unison
 
 load_bash:
 	cp bash/.bashrc ~
 	cp bash/.bash_profile ~
 
 unison:
-	cp -rf ~/.unison unison
+	cp ~/.unison/*.prf unison/
 
 bashrc:
 	cp ~/.bashrc bash/
