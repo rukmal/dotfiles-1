@@ -1,4 +1,5 @@
-alias school='cd ~/school/14au' # current quarter
+alias sync='unison -batch school'
+alias school='cd ~/school'
 alias 14au='cd ~/school/14au'
 alias 311='cd ~/school/14au/cse311'
 alias 351='cd ~/school/14au/cse351'
