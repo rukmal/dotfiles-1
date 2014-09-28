@@ -97,7 +97,9 @@ alias gulpinit='npm init && npm install --save-dev gulp'
 # ==========================================
 # Fortan
 # ==========================================
-source /Users/christophersu/.fortran
+if [ -f ~/.fortran ]; then
+    source ~/.fortran
+fi
 
 # ==========================================
 # MongoDB
@@ -289,10 +291,15 @@ alias yum='sudo yum'
 # ==========================================
 # AWS
 # ==========================================
-export JAVA_HOME=$(/usr/libexec/java_home)
-export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.6.13.0
-export PATH=$PATH:$EC2_HOME/bin
-source ~/.aws_secret # get AWS secrets
+if [ -f /usr/libexec/java_home ]; then
+    export JAVA_HOME=$(/usr/libexec/java_home)
+    export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.6.13.0
+    export PATH=$PATH:$EC2_HOME/bin
+fi
+
+if [ -f ~/.aws_secret ]; then
+    source ~/.aws_secret # get AWS secrets
+fi
 
 # ==========================================
 # Automatically added
