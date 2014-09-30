@@ -13,3 +13,6 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 
 # faster key repeat
 defaults write NSGlobalDomain KeyRepeat -int 0
+
+# disable mouse acceleration
+defaults write .GlobalPreferences com.apple.mouse.scaling -1
