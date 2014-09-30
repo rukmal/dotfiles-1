@@ -219,20 +219,12 @@ function parse_git_branch() {
 
 ## Colors
 export CLICOLOR=1
-RED="\[\033[1;31m\]"
-BLUE="\[\033[0;34m\]"
-LIGHT_GRAY="\[\033[0;37m\]"
-CYAN="\[\033[0;36m\]"
-LIGHT_CYAN="\[\033[1;36m\]"
-NO_COLOR="\[\033[0m\]"
-
-## Actual PS1
-# PS1="$NO_COLOR"
-# PS1+="csu:\W"
-# PS1+="$BLUE"
-# PS1+="\$(parse_git_branch)"
-# PS1+="$NO_COLOR"
-# PS1+="$ "
+# RED="\[\033[1;31m\]"
+# BLUE="\[\033[0;34m\]"
+# LIGHT_GRAY="\[\033[0;37m\]"
+# CYAN="\[\033[0;36m\]"
+# LIGHT_CYAN="\[\033[1;36m\]"
+# NO_COLOR="\[\033[0m\]"
 
 host=$(hostname)
 if [ $host != christophersu.local ]
