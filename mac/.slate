@@ -52,6 +52,7 @@ bind ;:cmd,alt,shift grid 1440x900:8,2 1920x1080:8,2
 # bind 2:cmd,alt,shift activate-snapshot shotTwo
 bind 1:cmd,alt,shift corner top-left resize:screenSizeX;screenSizeY 0
 bind 2:cmd,alt,shift corner top-left resize:screenSizeX;screenSizeY 1
+bind 3:cmd,alt,shift corner top-left resize:screenSizeX;screenSizeY 2
 
 # For development where you need to create a 1280x800 window
 # alias smallmbp corner top-left resize:1280;800
