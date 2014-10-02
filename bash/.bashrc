@@ -45,11 +45,6 @@ alias mvi='mvim' # mvi to MacVim
 alias resume='cd ~/OneDrive/Career/Resume/Pages && make resume'
 
 # ==========================================
-# Android/Firefox mobile
-# ==========================================
-# export PATH=$PATH:$HOME/oss/adt-bundle-mac/sdk/tools:$HOME/oss/adt-bundle-mac/sdk/build-tools:$HOME/oss/adt-bundle-mac/sdk/platform-tools
-
-# ==========================================
 # Java
 # ==========================================
 function j() {
