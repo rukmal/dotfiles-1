@@ -94,31 +94,23 @@ alias mongod='mongod --dbpath data/'
 # ==========================================
 # Git
 # ==========================================
-## From @rukmal
 alias gif='git fetch'
 alias gis='git status'
 alias gid='git diff'
 alias gia='git add -A'
 alias gih='git push heroku master'
 
-# Function for git add, commit and push
-# Note: Commits ALL files in working directory.
-# Usage: gip [commit message] [branch to be push to]
 function gip() {
     git add -A
     git commit -m "$1";
     git push origin $2;
 }
 
-# Function for git add and commit
-# Note: Commits ALL files in working directory.
-# Usage: gic [commit message]
 function gic() {
     git add -A
     git commit -m "$1"
 }
 
-## Mine:
 alias gil='git pull'
 alias gipset='git push --set-upstream origin master'
 alias setgip='git push --set-upstream origin master'
