@@ -56,16 +56,19 @@ alias jav='j'
 # ==========================================
 # Python
 # ==========================================
+# Virtualenv
 alias makevenv='virtualenv --distribute env'
 alias startvenv='virtualenv --distribute env'
 alias venv='source env/bin/activate'
 alias oldmakevenv='virtualenv --distribute venv'
 alias oldvenv='source venv/bin/activate'
 
+# PyPi
 alias pypiupdate='python setup.py sdist upload'
 alias pypiupgrade='python setup.py sdist upload'
 alias pypiupload='python setup.py sdist upload'
 
+# Pip
 function pipupdate() {
     pip uninstall "$1" && pip install "$1" && pip freeze > requirements.txt
 }
@@ -75,7 +78,10 @@ function pipupdate() {
 # ==========================================
 export PATH=/usr/local/share/npm/bin:$PATH
 
+# package.json
 alias npmsave='npm update --save'
+
+# Gulp
 alias setgulp='npm init && npm install --save-dev gulp'
 alias gulpinit='npm init && npm install --save-dev gulp'
 
@@ -99,6 +105,9 @@ alias gis='git status'
 alias gid='git diff'
 alias gia='git add -A'
 alias gih='git push heroku master'
+alias gil='git pull'
+alias gipset='git push --set-upstream origin master'
+alias setgip='git push --set-upstream origin master'
 
 function gip() {
     git add -A
@@ -110,10 +119,6 @@ function gic() {
     git add -A
     git commit -m "$1"
 }
-
-alias gil='git pull'
-alias gipset='git push --set-upstream origin master'
-alias setgip='git push --set-upstream origin master'
 
 function giph() {
     git add -A
