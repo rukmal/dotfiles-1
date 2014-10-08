@@ -1,3 +1,6 @@
+# ==========================================
+# Include
+# ==========================================
 if [ -f /etc/bashrc ]; then
   . /etc/bashrc
 fi
@@ -19,7 +22,6 @@ fi
 alias v='mvim' # v to MacVim
 alias vi='mvim' # vi to MacVim
 alias mvi='mvim' # mvi to MacVim
-#alias gvim='mvim' # seems to not need an alias
 
 ## Evernote
 # function note() {
@@ -42,20 +44,11 @@ alias mvi='mvim' # mvi to MacVim
 alias resume='cd ~/OneDrive/Career/Resume/Pages && make resume'
 
 # ==========================================
-# Android/Firefox mobile
-# ==========================================
-# export PATH=$PATH:$HOME/oss/adt-bundle-mac/sdk/tools:$HOME/oss/adt-bundle-mac/sdk/build-tools:$HOME/oss/adt-bundle-mac/sdk/platform-tools
-
-# ==========================================
 # Java
 # ==========================================
 function j() {
     javac $1.java
     java $1
-}
-function junit() {
-    javac -cp ~/java/junit.jar *.java
-    java -cp ~/java/junit.jar:~/java/hamcrest-core.jar:. org.junit.runner.JUnitCore $1
 }
 alias ja='j'
 alias jav='j'
@@ -63,16 +56,19 @@ alias jav='j'
 # ==========================================
 # Python
 # ==========================================
+# Virtualenv
 alias makevenv='virtualenv --distribute env'
 alias startvenv='virtualenv --distribute env'
 alias venv='source env/bin/activate'
 alias oldmakevenv='virtualenv --distribute venv'
 alias oldvenv='source venv/bin/activate'
 
+# PyPi
 alias pypiupdate='python setup.py sdist upload'
 alias pypiupgrade='python setup.py sdist upload'
 alias pypiupload='python setup.py sdist upload'
 
+# Pip
 function pipupdate() {
     pip uninstall "$1" && pip install "$1" && pip freeze > requirements.txt
 }
@@ -82,7 +78,10 @@ function pipupdate() {
 # ==========================================
 export PATH=/usr/local/share/npm/bin:$PATH
 
+# package.json
 alias npmsave='npm update --save'
+
+# Gulp
 alias setgulp='npm init && npm install --save-dev gulp'
 alias gulpinit='npm init && npm install --save-dev gulp'
 
@@ -101,34 +100,25 @@ alias mongod='mongod --dbpath data/'
 # ==========================================
 # Git
 # ==========================================
-## From @rukmal
 alias gif='git fetch'
 alias gis='git status'
 alias gid='git diff'
 alias gia='git add -A'
 alias gih='git push heroku master'
+alias gil='git pull'
+alias gipset='git push --set-upstream origin master'
+alias setgip='git push --set-upstream origin master'
 
-# Function for git add, commit and push
-# Note: Commits ALL files in working directory.
-# Usage: gip [commit message] [branch to be push to]
 function gip() {
     git add -A
     git commit -m "$1";
     git push origin $2;
 }
 
-# Function for git add and commit
-# Note: Commits ALL files in working directory.
-# Usage: gic [commit message]
 function gic() {
     git add -A
     git commit -m "$1"
 }
-
-## Mine:
-alias gil='git pull'
-alias gipset='git push --set-upstream origin master'
-alias setgip='git push --set-upstream origin master'
 
 function giph() {
     git add -A
@@ -223,20 +213,12 @@ function parse_git_branch() {
 
 ## Colors
 export CLICOLOR=1
-RED="\[\033[1;31m\]"
-BLUE="\[\033[0;34m\]"
-LIGHT_GRAY="\[\033[0;37m\]"
-CYAN="\[\033[0;36m\]"
-LIGHT_CYAN="\[\033[1;36m\]"
-NO_COLOR="\[\033[0m\]"
-
-## Actual PS1
-# PS1="$NO_COLOR"
-# PS1+="csu:\W"
-# PS1+="$BLUE"
-# PS1+="\$(parse_git_branch)"
-# PS1+="$NO_COLOR"
-# PS1+="$ "
+# RED="\[\033[1;31m\]"
+# BLUE="\[\033[0;34m\]"
+# LIGHT_GRAY="\[\033[0;37m\]"
+# CYAN="\[\033[0;36m\]"
+# LIGHT_CYAN="\[\033[1;36m\]"
+# NO_COLOR="\[\033[0m\]"
 
 host=$(hostname)
 if [ $host != christophersu.local ]
