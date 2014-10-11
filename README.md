@@ -8,3 +8,4 @@ My configurations for:
 * Sublime
 * Windows (e.g. AutoHotkey)
 * Mac (system configuration)
+* Slate
