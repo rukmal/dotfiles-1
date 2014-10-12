@@ -9,3 +9,4 @@ My configurations for:
 * Windows (e.g. AutoHotkey)
 * Mac (system configuration)
 * Slate
+* Unison
