@@ -10,4 +10,4 @@ My configurations for:
 * Mac (system configuration)
 * Slate
 * Unison
-* Building resume
+* Resume
