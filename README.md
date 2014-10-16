@@ -2,7 +2,7 @@ dotfiles
 ========
 My configurations for:
 
-* Vim
+* Vim (Mac and Windows)
 * Atom
 * Bash
 * Sublime
