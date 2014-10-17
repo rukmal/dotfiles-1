@@ -1,4 +1,4 @@
-.PHONY: bashrc bash_profile fortran slate vim atom sublime vim_windows git load_bash_profile load_bash unison
+.PHONY: bashrc bash_profile fortran slate vim atom sublime vim_windows git unison git
 
 load_bash:
 	cp bash/.bashrc ~
