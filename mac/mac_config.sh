@@ -4,7 +4,7 @@ defaults write com.apple.dock autohide-time-modifier -float 0.7
 killall Dock
 
 # set screenshot configuration
-defaults write com.apple.screencapture location /Users/christophersu/OneDrive/Screenshots
+defaults write com.apple.screencapture location /Users/christophersu/Dropbox/Screenshots
 defaults write com.apple.screencapture type jpg
 killall SystemUIServer
 
