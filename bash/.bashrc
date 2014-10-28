@@ -70,6 +70,10 @@ alias venv='source env/bin/activate'
 alias oldmakevenv='virtualenv --distribute venv'
 alias oldvenv='source venv/bin/activate'
 
+alias deac='deactivate'
+alias deact='deactivate'
+alias deactiv='deactivate'
+
 # PyPi
 alias pypiupdate='python setup.py sdist upload'
 alias pypiupgrade='python setup.py sdist upload'
