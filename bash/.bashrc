@@ -138,6 +138,13 @@ function giph() {
     git push heroku master
 }
 
+function gihp() {
+    git add -A
+    git commit -m "$1";
+    git push origin $2;
+    git push heroku master
+}
+
 # Create a new git repo locally and on GitHub
 # Usage: gin [name of repository and name for GitHub repo]
 function gin() {
