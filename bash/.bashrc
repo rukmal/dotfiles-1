@@ -92,6 +92,10 @@ export PATH=/usr/local/share/npm/bin:$PATH
 # package.json
 alias npmsave='npm update --save'
 
+function npmdev() {
+    npm install --save-dev $1
+}
+
 # Gulp
 alias setgulp='npm init && npm install --save-dev gulp'
 alias gulpinit='npm init && npm install --save-dev gulp'
