@@ -100,6 +100,14 @@ function npmdev() {
 alias setgulp='npm init && npm install --save-dev gulp'
 alias gulpinit='npm init && npm install --save-dev gulp'
 
+
+function gulpgip() {
+    gulp;
+    git add -A;
+    git commit -m "$1";
+    git push origin $2;
+}
+
 # ==========================================
 # Fortan
 # ==========================================
