@@ -52,7 +52,3 @@ git:
 	cp ~/.gitconfig .
 	rm .gitignore_global
 	cp ~/.gitignore_global .
-
-# vim_windows:
-# 	rm _vimrc
-# 	cp ~/.vimrc _vimrc
