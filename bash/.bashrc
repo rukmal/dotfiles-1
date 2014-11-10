@@ -24,6 +24,12 @@ if [ -f ~/.mac ]; then
 fi
 
 # ==========================================
+# Custom
+# ==========================================
+alias todoist='python ~/Code/todoist-cli/todoist.py'
+alias todo='python ~/Code/todoist-cli/todoist.py'
+
+# ==========================================
 # Text Editing
 # ==========================================
 alias v='mvim' # v to MacVim
