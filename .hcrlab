@@ -3,7 +3,7 @@
 function setros() {
   source /opt/ros/$1/setup.bash
 }
-source /opt/ros/groovy/setup.bash # Default to groovy. Change this to default to Hydro if you want.
+source /opt/ros/hydro/setup.bash # Default to groovy. Change this to default to Hydro if you want.
 export ROS_HOSTNAME=localhost # Optional, the name of this computer.
 export ROS_MASTER_URI=http://localhost:11311 # The location of the ROS master.
 export ROBOT=sim # The type of robot.
