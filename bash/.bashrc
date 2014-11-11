@@ -16,6 +16,10 @@ if [ -f ~/.school ]; then
     source ~/.school
 fi
 
+if [ -f ~/.hcrlab ]; then
+    source ~/.hcrlab
+fi
+
 # ==========================================
 # Mac
 # ==========================================
