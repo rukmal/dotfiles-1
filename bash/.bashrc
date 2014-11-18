@@ -27,6 +27,16 @@ if [ -f ~/.mac ]; then
     source ~/.mac
 fi
 
+## Make a Jekyll post
+function post() {
+    POST_TITLE=`date +"%Y-%M-%d"`
+    for var in "$@"
+    do
+        POST_TITLE="$POST_TITLE-$var"
+    done
+    echo $POST_TITLE
+}
+
 # ==========================================
 # Custom
 # ==========================================
