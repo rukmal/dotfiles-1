@@ -29,12 +29,14 @@ fi
 
 ## Make a Jekyll post
 function post() {
-    POST_TITLE=`date +"%Y-%M-%d"`
+    POST_TITLE=`date +"%Y-%m-%d"`
     for var in "$@"
     do
         POST_TITLE="$POST_TITLE-$var"
     done
-    echo $POST_TITLE
+    POST_TITLE="$POST_TITLE.md"
+    printf -- "---\nlayout: post\ntitle: TITLE_GOES_HERE\ncategories:\n- CATEGORY_GOES_HERE\n---\n\n" > "~/code/slog/_posts/$POST_TITLE"
+    subl $POST_TITLE
 }
 
 # ==========================================
