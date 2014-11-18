@@ -36,7 +36,7 @@ function post() {
     done
     POST_TITLE="$POST_TITLE.md"
     printf -- "---\nlayout: post\ntitle: TITLE_GOES_HERE\ncategories:\n- CATEGORY_GOES_HERE\n---\n\n" > ~/code/slog/_posts/$POST_TITLE
-    subl $POST_TITLE
+    subl ~/code/slog/_posts/$POST_TITLE
 }
 
 # ==========================================
