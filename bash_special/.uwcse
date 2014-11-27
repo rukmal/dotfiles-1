@@ -1,3 +1,8 @@
+# HCR Lab
+alias robo='ssh christophersu@robosalmon.cs.washington.edu'
+alias robosalmon='ssh christophersu@robosalmon.cs.washington.edu'
+alias hcrlab='ssh christophersu@robosalmon.cs.washington.edu'
+
 # SSH UW CSE
 alias acho='ssh csu@acho.cs.washington.edu'
 alias acme='ssh csu@acme.cs.washington.edu'
