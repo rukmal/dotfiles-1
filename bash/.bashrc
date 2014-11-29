@@ -33,6 +33,13 @@ if [ -f ~/.jekyll ]; then
 fi
 
 # ==========================================
+# Fortan
+# ==========================================
+if [ -f ~/.fortran ]; then
+    source ~/.fortran
+fi
+
+# ==========================================
 # Custom
 # ==========================================
 alias todoist='python ~/Code/todoist-cli/todoist.py'
@@ -44,24 +51,6 @@ alias todo='python ~/Code/todoist-cli/todoist.py'
 alias v='mvim' # v to MacVim
 alias vi='mvim' # vi to MacVim
 alias mvi='mvim' # mvi to MacVim
-
-## Evernote
-# function note() {
-#     if [ -z "$1" ]
-#     then
-#         local title=$(date +%Y-%m-%d)
-#     else
-#         local title=$1
-#     fi
-#     if [ -z "$2" ]
-#     then
-#         geeknote create --title "$title"
-#         geeknote edit --note "$title" --content "WRITE"
-#     else
-#         geeknote create --title "$title" --notebook "$2"
-#         geeknote edit --note "$title" --content "WRITE" --notebook "$2"
-#     fi
-# }
 
 alias resume='cd ~/OneDrive/Career/Resume/Pages && make resume'
 
@@ -124,11 +113,10 @@ function gulpgip() {
 }
 
 # ==========================================
-# Fortan
+# Go
 # ==========================================
-if [ -f ~/.fortran ]; then
-    source ~/.fortran
-fi
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # ==========================================
 # MongoDB
@@ -256,14 +244,7 @@ function parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-## Colors
 export CLICOLOR=1
-# RED="\[\033[1;31m\]"
-# BLUE="\[\033[0;34m\]"
-# LIGHT_GRAY="\[\033[0;37m\]"
-# CYAN="\[\033[0;36m\]"
-# LIGHT_CYAN="\[\033[1;36m\]"
-# NO_COLOR="\[\033[0m\]"
 
 host=$(hostname)
 if [ $host == "christophersu.local" ]; then
