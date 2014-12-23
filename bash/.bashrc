@@ -85,7 +85,7 @@ alias pypiupload='python setup.py sdist upload'
 
 # Pip
 function pipupdate() {
-    pip uninstall "$1" && pip install "$1" && pip freeze > requirements.txt
+    pip install --upgrade "$1" && pip freeze > requirements.txt
 }
 
 # ==========================================
