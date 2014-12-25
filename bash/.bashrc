@@ -88,6 +88,15 @@ function pipupdate() {
     pip install --upgrade "$1" && pip freeze > requirements.txt
 }
 
+function pipinstall() {
+    if [ $# -eq 0 ]
+        then
+            pip install -r requirements.txt
+        else
+            pip install -r "$1"
+    fi
+}
+
 # ==========================================
 # Node
 # ==========================================
