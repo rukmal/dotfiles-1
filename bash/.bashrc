@@ -5,9 +5,7 @@ if [ -f /etc/bashrc ]; then
   . /etc/bashrc
 fi
 
-# ==========================================
-# School
-# ==========================================
+### School
 if [ -f ~/.uwcse ]; then
     source ~/.uwcse
 fi
@@ -20,21 +18,17 @@ if [ -f ~/.hcrlab ]; then
     source ~/.hcrlab
 fi
 
-# ==========================================
-# Mac
-# ==========================================
+### Mac
 if [ -f ~/.mac ]; then
     source ~/.mac
 fi
 
-## Make a Jekyll post
+### Make a Jekyll post
 if [ -f ~/.jekyll ]; then
     source ~/.jekyll
 fi
 
-# ==========================================
-# Fortan
-# ==========================================
+### Fortan
 if [ -f ~/.fortran ]; then
     source ~/.fortran
 fi
