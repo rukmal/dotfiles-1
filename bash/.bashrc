@@ -42,10 +42,6 @@ alias todo='python ~/Code/todoist-cli/todoist.py'
 # ==========================================
 # Text Editing
 # ==========================================
-alias v='mvim' # v to MacVim
-alias vi='mvim' # vi to MacVim
-alias mvi='mvim' # mvi to MacVim
-
 alias resume='cd ~/Dropbox/Career/Resume/Pages && make resume'
 
 # ==========================================
