@@ -60,23 +60,25 @@ alias jav='j'
 # Virtualenv
 alias makevenv='virtualenv --distribute env'
 alias startvenv='virtualenv --distribute env'
+
 alias venv='source env/bin/activate'
-alias oldmakevenv='virtualenv --distribute venv'
-alias oldvenv='source venv/bin/activate'
 
 alias deac='deactivate'
 alias deact='deactivate'
 alias deactiv='deactivate'
 
+alias oldmakevenv='virtualenv --distribute venv'
+alias oldvenv='source venv/bin/activate'
+
 # PyPi
 alias pypiupdate='python setup.py sdist upload'
-alias pypiupgrade='python setup.py sdist upload'
-alias pypiupload='python setup.py sdist upload'
+alias pypiupload='pypiupdate'
 
 # Pip
 function pipupdate() {
     pip install --upgrade "$1" && pip freeze > requirements.txt
 }
+alias pipupgrade='pipupdate'
 
 function pipinstall() {
     if [ $# -eq 0 ]
