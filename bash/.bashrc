@@ -42,7 +42,7 @@ alias todo='python ~/Code/todoist-cli/todoist.py'
 # ==========================================
 # Text Editing
 # ==========================================
-alias resume='cd ~/Dropbox/Career/Resume/Pages && make resume'
+alias resume='cd ~/Dropbox/Career/Resume && make resume'
 
 # ==========================================
 # Java
