@@ -57,6 +57,8 @@ alias jav='j'
 # ==========================================
 # Python
 # ==========================================
+alias py='python'
+
 # Virtualenv
 alias makevenv='virtualenv --distribute env'
 alias startvenv='virtualenv --distribute env'
@@ -247,16 +249,18 @@ function parse_git_branch() {
 
 export CLICOLOR=1
 
-host=$(hostname)
-if [ $host == "christophersu.local" ]; then
-    PS1="\[\e[0;32m\]csu:\W\[\033[0;34m\]\$(parse_git_branch)\[\033[0m\]$ "
-else
-    PS1="\[\e[0;32m\]\u@\h:\W\[\033[0;34m\]\$(parse_git_branch)\[\033[0m\]$ "
-fi
+# host=$(hostname)
+# if [ $host == "christophersu.local" ]; then
+#     PS1="\[\e[0;32m\]csu:\W\[\033[0;34m\]\$(parse_git_branch)\[\033[0m\]$ "
+# else
+#     PS1="\[\e[0;32m\]\u@\h:\W\[\033[0;34m\]\$(parse_git_branch)\[\033[0m\]$ "
+# fi
 
-if [[ $host == *dhcp* ]]; then
-    PS1="\[\e[0;32m\]csu:\W\[\033[0;34m\]\$(parse_git_branch)\[\033[0m\]$ "
-fi
+# if [[ $host == *dhcp* ]]; then
+#     PS1="\[\e[0;32m\]csu:\W\[\033[0;34m\]\$(parse_git_branch)\[\033[0m\]$ "
+# fi
+
+PS1="\[\e[0;32m\]csu:\W\[\033[0;34m\]\$(parse_git_branch)\[\033[0m\]$ "
 
 export PS1
 
