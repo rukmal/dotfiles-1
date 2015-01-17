@@ -144,6 +144,10 @@ function gip() {
     git push origin $2;
 }
 
+function gib() {
+    git checkout -b "$1"
+}
+
 function gic() {
     git add -A
     git commit -m "$1"
