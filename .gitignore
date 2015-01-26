@@ -1,3 +1,5 @@
+*.node-gyp*
+atom/.node-gyp/*
 *.cache
 *.pyc
 */storage/*
