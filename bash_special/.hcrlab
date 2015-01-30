@@ -1,3 +1,6 @@
+if [ -f ~/catkin_ws/devel/setup.sh ]; then
+    source ~/catkin_ws/devel/setup.sh
+fi
 # RWS
 export ROS_PACKAGE_PATH=/home/christophersu/rws/catkin_ws:$ROS_PACKAGE_PATH
 
