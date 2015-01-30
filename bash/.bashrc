@@ -23,6 +23,13 @@ if [ -f ~/.mac ]; then
     source ~/.mac
 fi
 
+<<<<<<< HEAD
+=======
+if [ -f ~/.aws ]; then
+    source ~/.aws
+fi
+
+>>>>>>> 31dbe67f7d02ccfbe04ea64e63f5699f3e694ccc
 ### Make a Jekyll post
 if [ -f ~/.jekyll ]; then
     source ~/.jekyll
@@ -57,6 +64,11 @@ alias jav='j'
 # ==========================================
 # Python
 # ==========================================
+<<<<<<< HEAD
+=======
+PATH=$PATH:~/anaconda/bin
+
+>>>>>>> 31dbe67f7d02ccfbe04ea64e63f5699f3e694ccc
 alias py='python'
 
 # Virtualenv
