@@ -1,5 +1,7 @@
 alias school='unison -batch -silent school'
 
+alias notes='cd ~/school/notes'
+
 alias 14au='cd ~/school/14au'
 alias 311='cd ~/school/14au/cse311'
 alias 351='cd ~/school/14au/cse351'
