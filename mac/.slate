@@ -23,6 +23,32 @@ alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
 alias tophalf corner top-left resize:screenSizeX;screenSizeY/2
 alias bottomhalf corner bottom-left resize:screenSizeX;screenSizeY/2
 
+bind m:cmd,shift ${full}
+bind ,:cmd,shift undo
+bind j:cmd,alt,shift ${lefthalf}
+bind k:cmd,alt,shift ${righthalf}
+bind ;:cmd,alt,shift grid 1440x900:8,2 1920x1080:8,3
+
+# bind p:cmd,alt,shift move screenOriginX+333;screenOriginY 1019;1024
+# bind 1:cmd,alt,shift corner top-left resize:screenSizeX;screenSizeY 0
+# bind 2:cmd,alt,shift corner top-left resize:screenSizeX;screenSizeY 1
+# bind 3:cmd,alt,shift corner top-left resize:screenSizeX;screenSizeY 2
+
+bind 1:cmd,alt,shift throw 0 resize
+bind 2:cmd,alt,shift throw 1 resize
+bind 3:cmd,alt,shift throw 2 resize
+
+bind 1:cmd,ctrl throw 0
+bind 2:cmd,ctrl throw 1
+bind 3:cmd,ctrl throw 2
+
+#### Snapshots
+# bind 1:cmd,ctrl,alt,shift snapshot shotOne save-to-disk
+# bind 2:cmd,ctrl,alt,shift snapshot shotTwo save-to-disk
+# bind 1:cmd,alt,shift activate-snapshot shotOne
+# bind 2:cmd,alt,shift activate-snapshot shotTwo
+
+#### Open by application
 # bind c:${hotkey} sequence focus 'Google Chrome' > hide all-but:current
 # bind m:${hotkey} sequence focus 'Mail' > hide all-but:current
 # bind f:${hotkey} sequence focus 'Finder' > hide all-but:current
@@ -34,26 +60,10 @@ alias bottomhalf corner bottom-left resize:screenSizeX;screenSizeY/2
 #bind e:${hotkey} focus 'Mail'
 #bind f:${hotkey} focus 'Finder'
 #bind m:${hotkey} focus 'iTunes'
-# bind s:${hotkey} focus 'Skype'
+#bind s:${hotkey} focus 'Skype'
 #bind t:${hotkey} focus 'Sublime Text 2'
 #bind v:${hotkey} focus 'VLC'
 
-bind m:cmd,shift ${full}
-bind ,:cmd,shift undo
-bind j:cmd,alt,shift ${lefthalf}
-bind k:cmd,alt,shift ${righthalf}
-bind ;:cmd,alt,shift grid 1440x900:8,2 1920x1080:8,2
-
-# bind p:cmd,alt,shift move screenOriginX+333;screenOriginY 1019;1024
-
-# bind 1:cmd,ctrl,alt,shift snapshot shotOne save-to-disk
-# bind 2:cmd,ctrl,alt,shift snapshot shotTwo save-to-disk
-# bind 1:cmd,alt,shift activate-snapshot shotOne
-# bind 2:cmd,alt,shift activate-snapshot shotTwo
-bind 1:cmd,alt,shift corner top-left resize:screenSizeX;screenSizeY 0
-bind 2:cmd,alt,shift corner top-left resize:screenSizeX;screenSizeY 1
-bind 3:cmd,alt,shift corner top-left resize:screenSizeX;screenSizeY 2
-
-# For development where you need to create a 1280x800 window
+#### For development where you need to create a 1280x800 window
 # alias smallmbp corner top-left resize:1280;800
 # bind ':cmd,alt,shift ${smallmbp}
