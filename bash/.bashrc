@@ -23,6 +23,10 @@ if [ -f ~/.mac ]; then
     source ~/.mac
 fi
 
+if [ -f ~/.aws ]; then
+    source ~/.aws
+fi
+
 ### Make a Jekyll post
 if [ -f ~/.jekyll ]; then
     source ~/.jekyll
@@ -57,6 +61,10 @@ alias jav='j'
 # ==========================================
 # Python
 # ==========================================
+PATH=$PATH:~/anaconda/bin
+
+alias py='python'
+
 # Virtualenv
 alias makevenv='virtualenv --distribute env'
 alias startvenv='virtualenv --distribute env'
@@ -79,6 +87,9 @@ function pipupdate() {
     pip install --upgrade "$1" && pip freeze > requirements.txt
 }
 alias pipupgrade='pipupdate'
+
+alias pipfreeze='pip freeze > requirements.txt'
+alias pif='pipfreeze'
 
 function pipinstall() {
     if [ $# -eq 0 ]
