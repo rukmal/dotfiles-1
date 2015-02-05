@@ -61,8 +61,6 @@ alias jav='j'
 # ==========================================
 # Python
 # ==========================================
-PATH=$PATH:~/anaconda/bin
-
 alias py='python'
 
 # Virtualenv
