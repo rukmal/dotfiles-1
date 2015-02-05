@@ -38,9 +38,9 @@ bind 1:cmd,alt,shift throw 0 resize
 bind 2:cmd,alt,shift throw 1 resize
 bind 3:cmd,alt,shift throw 2 resize
 
-bind 1:cmd,ctrl throw 0
-bind 2:cmd,ctrl throw 1
-bind 3:cmd,ctrl throw 2
+bind 1:cmd,ctrl move screenOriginX+((screenSizeX-windowSizeX)/2);screenOriginY+((screenSizeY-windowSizeY)/2) windowSizeX;windowSizeY 0
+bind 2:cmd,ctrl move screenOriginX+((screenSizeX-windowSizeX)/2);screenOriginY+((screenSizeY-windowSizeY)/2) windowSizeX;windowSizeY 1
+bind 3:cmd,ctrl move screenOriginX+((screenSizeX-windowSizeX)/2);screenOriginY+((screenSizeY-windowSizeY)/2) windowSizeX;windowSizeY 2
 
 #### Snapshots
 # bind 1:cmd,ctrl,alt,shift snapshot shotOne save-to-disk
