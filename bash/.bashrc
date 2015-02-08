@@ -38,12 +38,6 @@ if [ -f ~/.fortran ]; then
 fi
 
 # ==========================================
-# Custom
-# ==========================================
-alias todoist='python ~/Code/todoist-cli/todoist.py'
-alias todo='python ~/Code/todoist-cli/todoist.py'
-
-# ==========================================
 # Text Editing
 # ==========================================
 alias resume='cd ~/Dropbox/Career/Resume && make resume'
