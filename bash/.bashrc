@@ -200,22 +200,13 @@ alias server='python -m SimpleHTTPServer'
 
 alias reload='source ~/.bash_profile'
 
-## Because I can never remember aliases:
-function mc() {
-    mkcd "$1";
-}
-
-function mcd() {
-    mkcd "$1";
-}
- 
 ## Use a long listing format ##
-alias ll='ls -la'
 alias sl='ls'
 alias la='ls -a'
- 
-## Show hidden files ##
+alias ll='ls -la'
+# Show hidden files
 alias l.='ls -d .* --color=auto'
+
 alias mkdir='mkdir -pv'
 
 function extract() {
