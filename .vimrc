@@ -29,10 +29,16 @@ set noerrorbells
 set novisualbell
 set t_vb=
 
+" 80th column
+if (exists('+colorcolumn'))
+    set colorcolumn=80
+    highlight ColorColumn ctermbg=9
+endif
+
 " safe?
-set nobackup
-set nowb
-set noswapfile
+" set nobackup
+" set nowb
+" set noswapfile
 
 set guifont=Source\ Code\ Pro:h16
 set background=dark
@@ -59,8 +65,8 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " nerdtree
-" let NERDTreeIgnore = ['\.pyc$']
-" let g:NERDTreeWinSize = 20
+let NERDTreeIgnore = ['\.pyc$']
+let g:NERDTreeWinSize = 20
 
 " keyboard shortcuts
 silent! nmap <F2> :NERDTreeToggle<CR>
@@ -69,7 +75,8 @@ silent! nmap <F2> :NERDTreeToggle<CR>
 " let g:NERDTreeMapActivateNode="<F3>"
 " let g:NERDTreeMapPreview="<F4>"
 
-autocmd VimEnter * NERDTree | wincmd p " open nerdtree and switch to text pane
+" autocmd VimEnter * NERDTree | wincmd p " open nerdtree and switch to text pane
+
 " new version (only opens nerdtree when mvim started without arguments
 "function! StartUp()                                                                             
 "    if 0 == argc()
@@ -78,9 +85,7 @@ autocmd VimEnter * NERDTree | wincmd p " open nerdtree and switch to text pane
 "endfunction
 "autocmd VimEnter * call StartUp()
 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " gundo
 nnoremap <F5> :GundoToggle<CR>
-
-
