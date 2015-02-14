@@ -59,8 +59,28 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " nerdtree
-let NERDTreeIgnore = ['\.pyc$']
+" let NERDTreeIgnore = ['\.pyc$']
+" let g:NERDTreeWinSize = 20
+
+" keyboard shortcuts
+silent! nmap <F2> :NERDTreeToggle<CR>
+" find better keys for these: (F3 doesn't work on mac)
+" silent! map <F3> :NERDTreeFind<CR>
+" let g:NERDTreeMapActivateNode="<F3>"
+" let g:NERDTreeMapPreview="<F4>"
+
+autocmd VimEnter * NERDTree | wincmd p " open nerdtree and switch to text pane
+" new version (only opens nerdtree when mvim started without arguments
+"function! StartUp()                                                                             
+"    if 0 == argc()
+"        NERDTree | wincmd p
+"    end
+"endfunction
+"autocmd VimEnter * call StartUp()
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " gundo
 nnoremap <F5> :GundoToggle<CR>
+
 
