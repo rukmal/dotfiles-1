@@ -1,4 +1,5 @@
-source ~/rosbuild_ws/setup.bash
-source ~/catkin_ws/devel/setup.sh
-export ROS_ENV_LOADER=/etc/ros/groovy/env.sh
-export ROS_PACKAGE_PATH=~/rosbuild_ws/:~/catkin_ws/:$ROS_PACKAGE_PATH
+export ROS_ENV_LOADER=/etc/ros/distro/env.sh
+export ROS_HOSTNAME=c1
+export ROS_MASTER_HOST=c1
+export ROS_MASTER_URI=http://c1:11311
+export ROBOT=pr2
