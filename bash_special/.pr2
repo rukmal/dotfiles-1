@@ -1,0 +1,4 @@
+source ~/rosbuild_ws/setup.bash
+source ~/catkin_ws/devel/setup.sh
+export ROS_ENV_LOADER=/etc/ros/groovy/env.sh
+export ROS_PACKAGE_PATH=~/rosbuild_ws/:~/catkin_ws/:$ROS_PACKAGE_PATH
