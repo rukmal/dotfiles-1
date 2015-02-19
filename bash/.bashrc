@@ -246,8 +246,10 @@ function parse_git_branch() {
 export CLICOLOR=1
 
 if [ -d "/Users/christophersu" ]; then
+    # On local mac
     PS1="\[\e[0;32m\]csu:\W\[\033[0;34m\]\$(parse_git_branch)\[\033[0m\]$ "
 else
+    # On some other machine
     PS1="\[\e[0;32m\]csu@\h:\W\[\033[0;34m\]\$(parse_git_branch)\[\033[0m\]$ "
 fi
 
