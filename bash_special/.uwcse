@@ -2,8 +2,8 @@
 alias robo='ssh christophersu@robosalmon.cs.washington.edu'
 alias robosalmon='ssh christophersu@robosalmon.cs.washington.edu'
 alias hcrlab='ssh christophersu@robosalmon.cs.washington.edu'
-alias c1='ssh christophersu@c1.cs.washington.edu'
-alias pr2='ssh christophersu@c1.cs.washington.edu'
+alias c1='ssh -i ~/.ssh/pr2 christophersu@c1.cs.washington.edu'
+alias pr2='c1'
 
 # SSH UW CSE
 alias acho='ssh csu@acho.cs.washington.edu'
