@@ -71,6 +71,11 @@ alias oldmakevenv='virtualenv --distribute venv'
 alias oldvenv='source venv/bin/activate'
 
 # PyPi
+alias pypisubmit='python setup.py register -r pypi'
+alias pypiregister='pypisubmit'
+alias pypinew='pypisubmit'
+alias pypicreate='pypisubmit'
+
 alias pypiupdate='python setup.py sdist upload'
 alias pypiupload='pypiupdate'
 
