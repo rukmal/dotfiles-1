@@ -282,6 +282,7 @@ alias path='echo -e ${PATH//:/\\n}'
 # Common directories
 alias code='cd ~/code'
 alias dotfiles='cd ~/code/dotfiles'
+alias csu.='cd ~/code/csu.github.io'
 alias dropbox='cd ~/Dropbox'
 alias host='vim ~/etc/hosts'
 
