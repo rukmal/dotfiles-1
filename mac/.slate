@@ -27,7 +27,9 @@ bind m:cmd,shift ${full}
 bind ,:cmd,shift undo
 bind j:cmd,alt,shift ${lefthalf}
 bind k:cmd,alt,shift ${righthalf}
-bind ;:cmd,alt,shift grid 1440x900:8,2 1920x1080:8,3
+bind u:cmd,alt,shift ${tophalf}
+bind i:cmd,alt,shift ${bottomhalf}
+bind ;:cmd,alt,shift grid 1440x900:8,4 1920x1080:8,4  1080x1920:6,10
 
 # bind p:cmd,alt,shift move screenOriginX+333;screenOriginY 1019;1024
 # bind 1:cmd,alt,shift corner top-left resize:screenSizeX;screenSizeY 0
