@@ -1,4 +1,9 @@
 {
+	"bold_folder_labels": true,
+	"caret_extra_bottom": 1,
+	"caret_extra_top": 1,
+	"caret_extra_width": 1,
+	"caret_style": "solid",
 	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
 	"file_exclude_patterns":
 	[
@@ -25,16 +30,27 @@
 		"*.mod"
 	],
 	"font_face": "Source Code Pro",
-	"font_size": 16.0,
+	"font_size": 18.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"Base16 Color Schemes",
+		"Python Improved",
+		"Solarized Color Scheme",
+		"Markdown Extended",
+		"Increment Selection",
 		"Markdown",
-		"Vintage",
-		"Theme - Phoenix",
-		"Theme - Soda"
+		"Theme - Spacegray",
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
 	],
 	"line_numbers": true,
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
 	"spacegray_sidebar_font_large": 15.0,
 	"spacegray_sidebar_font_normal": 14.0,
 	"spacegray_sidebar_font_small": 13.0,
@@ -42,5 +58,6 @@
 	"tab_size": 4,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": false,
+	"wide_caret": true,
 	"word_separators": "./\\()\"'-:,.;<>~!@#%^&*|+=[]{}`~?"
 }
