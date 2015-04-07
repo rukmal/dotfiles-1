@@ -4,8 +4,9 @@ Rwin::return
 
 ; Text editing
 ;;; Alt/Opt + ?
-<#Up::Send ^{Up}
-<#Down::Send ^{Down}
+;;;;; Alt+Up/Down behavior is difficult to mimick
+<#Up::Send {Up}
+<#Down::Send {Down}
 <#Left::Send ^{Left}
 <#Right::Send ^{Right}
 +<#Left::Send +^{Left}
