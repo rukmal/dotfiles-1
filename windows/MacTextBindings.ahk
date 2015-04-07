@@ -1,6 +1,6 @@
-; Disable Windows keys
-;LWin::return
-;Rwin::return
+; Remap Windows keys
+LWin::return
+Rwin::return
 
 ; Text editing
 ;;; Alt/Opt + ?
@@ -24,7 +24,7 @@
 +<!Right::Send +{End}
 <!BS::Send +{Home}{BS}
 
-; Bring back window management
+; Bring back window functionality
 <#<!Up::Send #{Up}
 <#<!Down::Send #{Down}
 <#<!Left::Send #{Left}
