@@ -1,6 +1,7 @@
 ; Remap Windows keys
 LWin::return
-Rwin::return
+RWin::return
+#Tab::Send {LWin}
 
 ; Text editing
 ;;; Alt/Opt + ?
