@@ -1,6 +1,7 @@
 #IfWinActive, ahk_exe chrome.exe
 <!w::Send ^{w}
 <!t::Send ^{t}
+<!l::Send ^{l}
 <!<+t::Send ^+{t}
 <!1::Send ^{1}
 <!2::Send ^{2}
