@@ -3,6 +3,8 @@
 ;RWin::return
 ;#Tab::Send {LWin}
 
+
+; Remap Ctrl+? to Alt+?
 LAlt::return
 
 <!a::Send ^{a}
@@ -15,7 +17,6 @@ LAlt::return
 <!n::Send ^{n}
 <!s::Send ^{s}
 <!p::Send ^{p}
-
 
 <!b::Send ^{b}
 <!i::Send ^{i}
@@ -41,4 +42,5 @@ LAlt::return
 <!9::Send ^{9}
 <!0::Send ^{0}
 
+; Other Mac behavior
 !H::WinMinimize, A
