@@ -26,6 +26,9 @@ LAlt::return
 <!t::Send ^{t}
 <!<+t::Send ^+{t}
 
+<!r::Send ^{r}
+<!<+r::Send ^+{r}
+
 <!z::Send ^{z}
 <!y::Send ^{y}
 <!<+z::Send ^+{z}
