@@ -28,6 +28,8 @@ LAlt::return
 
 <!r::Send ^{r}
 <!<+r::Send ^+{r}
+<!<+n::Send ^+{n}
+<!<+w::Send ^+{w}
 
 <!z::Send ^{z}
 <!y::Send ^{y}
