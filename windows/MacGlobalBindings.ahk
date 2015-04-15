@@ -4,7 +4,7 @@
 ;#Tab::Send {LWin}
 
 
-; Remap Ctrl+? to Alt+?
+; Remap Ctrl+? to Alt+?s
 LAlt::return
 
 <!a::Send ^{a}
@@ -17,6 +17,7 @@ LAlt::return
 <!o::Send ^{o}
 <!n::Send ^{n}
 <!s::Send ^{s}
+<!<+s::Send ^+{s}
 <!p::Send ^{p}
 
 <!b::Send ^{b}
