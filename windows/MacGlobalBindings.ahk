@@ -8,6 +8,7 @@
 LAlt::return
 
 <!a::Send ^{a}
+<!f::Send ^{f}
 
 <!c::Send ^{c}
 <!v::Send ^{v}
@@ -49,3 +50,4 @@ LAlt::return
 
 ; Other Mac behavior
 !H::WinMinimize, A
+<#`;::Send ...
