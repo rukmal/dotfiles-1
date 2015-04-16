@@ -2,4 +2,6 @@
 {
 	<!LButton::Send ^{LButton}
 	<!<+N::Send ^+{N}
+	<![::Send !{Left}
+	<!]::Send !{Right}
 }
