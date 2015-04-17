@@ -1,8 +1,7 @@
 ; Remap Windows keys
-;LWin::return
-;RWin::return
-;#Tab::Send {LWin}
-
+LWin::return
+RWin::return
+#Tab::Send {LWin}
 
 ; Remap Ctrl+? to Alt+?s
 LAlt::return
