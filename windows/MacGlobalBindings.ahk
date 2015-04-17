@@ -14,11 +14,11 @@ LAlt::return
 <!v::Send ^{v}
 <!x::Send ^{x}
 
-<!o::Send ^{o}
+!o::Send ^{o}
 <!n::Send ^{n}
 <!s::Send ^{s}
 <!<+s::Send ^+{s}
-<!p::Send ^{p}
+!p::Send ^{p}
 
 <!b::Send ^{b}
 <!i::Send ^{i}
@@ -48,6 +48,10 @@ LAlt::return
 <!8::Send ^{8}
 <!9::Send ^{9}
 <!0::Send ^{0}
+
+!-::Send ^{-}
+!=::Send ^{=}
+<!<+=::Send ^+{=}
 
 ; Other Mac behavior
 !H::WinMinimize, A
