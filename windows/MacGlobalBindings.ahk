@@ -66,6 +66,6 @@ LAlt::return
 <#`;::Send ... ; Horizontal ellipse
 
 ; Horizontal scrolling
-#MaxHotkeysPerInterval 500
+#MaxHotkeysPerInterval 200
 <+WheelDown::WheelRight
 <+WheelUp::WheelLeft
