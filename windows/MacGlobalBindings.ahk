@@ -24,6 +24,7 @@ LAlt::return
 <!i::Send ^{i}
 <!u::Send ^{u}
 
+!l::Send ^{l}
 <!w::Send ^{w}
 <!t::Send ^{t}
 <!<+t::Send ^+{t}
@@ -37,7 +38,6 @@ LAlt::return
 <!y::Send ^{y}
 <!<+z::Send ^+{z}
 
-<!l::Send ^{l}
 <!1::Send ^{1}
 <!2::Send ^{2}
 <!3::Send ^{3}
