@@ -3,40 +3,48 @@ LWin::return
 RWin::return
 #Tab::Send {LWin}
 
-; Remap Ctrl+? to Alt+?s
+; Disable LAlt where possible
 LAlt::return
 
-<!a::Send ^{a}
-<!f::Send ^{f}
+; Cut/Copy/Paste
+<!c::Send ^{c} ; Copy
+<!v::Send ^{v} ; Paste
+<!x::Send ^{x} ; Cut
 
-<!c::Send ^{c}
-<!v::Send ^{v}
-<!x::Send ^{x}
+; General
+!o::Send ^{o}  ; Open
+<!n::Send ^{n} ; New
+<!s::Send ^{s} ; Save
+<!<+s::Send ^+{s} ; Save as
+!p::Send ^{p}  ; Print
+<!a::Send ^{a} ; Select all
+<!f::Send ^{f} ; Find
 
-!o::Send ^{o}
-<!n::Send ^{n}
-<!s::Send ^{s}
-<!<+s::Send ^+{s}
-!p::Send ^{p}
+; Text editing
+<!b::Send ^{b} ; Bold
+<!i::Send ^{i} ; Italicize
+<!u::Send ^{u} ; Underline
 
-<!b::Send ^{b}
-<!i::Send ^{i}
-<!u::Send ^{u}
+; Browser features
+!l::Send ^{l}  ; Focus location bar
+<!r::Send ^{r} ; Reload
+<!<+r::Send ^+{r} ; Flush reload
 
-!l::Send ^{l}
-<!w::Send ^{w}
-<!t::Send ^{t}
-<!<+t::Send ^+{t}
+<!t::Send ^{t} ; New tab
+<!<+t::Send ^+{t} ; Reopen closed tab
+<!<+n::Send ^+{n} ; Incognito window
 
-<!r::Send ^{r}
-<!<+r::Send ^+{r}
-<!<+n::Send ^+{n}
-<!<+w::Send ^+{w}
+; Window management
+<!w::Send ^{w} ; Close tab
+<!<+w::Send ^+{w} ; Close window
+<!q::Send !{F4} ; Close window
 
-<!z::Send ^{z}
-<!y::Send ^{y}
-<!<+z::Send ^+{z}
+; Undo/Redo
+<!z::Send ^{z} ; Undo
+<!y::Send ^{y} ; Redo
+<!<+z::Send ^+{z} ; Redo
 
+; Navigation
 <!1::Send ^{1}
 <!2::Send ^{2}
 <!3::Send ^{3}
@@ -48,10 +56,11 @@ LAlt::return
 <!9::Send ^{9}
 <!0::Send ^{0}
 
-!-::Send ^{-}
-!=::Send ^{=}
-<!<+=::Send ^+{=}
+; Zoom
+!-::Send ^{-} ; Zoom out
+!=::Send ^{=} ; Zoom in
+<!<+=::Send ^+{=} ; Zoom in
 
 ; Other Mac behavior
 !H::WinMinimize, A
-<#`;::Send ...
+<#`;::Send ... ; Horizontal ellipse
