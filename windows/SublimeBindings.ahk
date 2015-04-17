@@ -13,7 +13,8 @@
 	<!0::Send !{0}
 
 	; Restore other Mac hotkeys
-	<^<!G::Send !{F3}
-	<+<!L::Send ^+{L}
-	<+<!P::Send ^+{P}
-}
+	<^<!g::Send !{F3}
+	<+<!l::Send ^+{l}
+	<+<!p::Send ^+{p}
+	<!t::Send ^{p}
+ }
