@@ -64,3 +64,8 @@ LAlt::return
 ; Other Mac behavior
 !H::WinMinimize, A
 <#`;::Send ... ; Horizontal ellipse
+
+; Horizontal scrolling
+#MaxHotkeysPerInterval 500
+<+WheelDown::WheelRight
+<+WheelUp::WheelLeft
