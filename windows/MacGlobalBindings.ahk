@@ -16,7 +16,7 @@ LAlt::return
 <!n::Send ^{n} ; New
 <!s::Send ^{s} ; Save
 <!<+s::Send ^+{s} ; Save as
-!p::Send ^{p}  ; Print
+<!p::Send ^{p}  ; Print
 <!a::Send ^{a} ; Select all
 <!f::Send ^{f} ; Find
 
@@ -26,7 +26,7 @@ LAlt::return
 <!u::Send ^{u} ; Underline
 
 ; Browser features
-!l::Send ^{l}  ; Focus location bar
+<!l::Send ^{l}  ; Focus location bar
 <!r::Send ^{r} ; Reload
 <!<+r::Send ^+{r} ; Flush reload
 
