@@ -13,16 +13,17 @@ LAlt::return
 <!v::Send ^{v}
 <!x::Send ^{x}
 
-<!o::Send ^{o}
+!o::Send ^{o}
 <!n::Send ^{n}
 <!s::Send ^{s}
 <!<+s::Send ^+{s}
-<!p::Send ^{p}
+!p::Send ^{p}
 
 <!b::Send ^{b}
 <!i::Send ^{i}
 <!u::Send ^{u}
 
+!l::Send ^{l}
 <!w::Send ^{w}
 <!t::Send ^{t}
 <!<+t::Send ^+{t}
@@ -36,7 +37,6 @@ LAlt::return
 <!y::Send ^{y}
 <!<+z::Send ^+{z}
 
-<!l::Send ^{l}
 <!1::Send ^{1}
 <!2::Send ^{2}
 <!3::Send ^{3}
@@ -47,6 +47,10 @@ LAlt::return
 <!8::Send ^{8}
 <!9::Send ^{9}
 <!0::Send ^{0}
+
+!-::Send ^{-}
+!=::Send ^{=}
+<!<+=::Send ^+{=}
 
 ; Other Mac behavior
 !H::WinMinimize, A
