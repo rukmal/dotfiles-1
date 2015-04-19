@@ -65,6 +65,10 @@ LAlt::return
 !H::WinMinimize, A
 <#`;::Send ... ; Horizontal ellipse
 
+; Mouse bindings
+XButton1::WinMinimize, A 
+XButton2::MButton
+
 ; Horizontal scrolling
 ; #MaxHotkeysPerInterval 200
 ; <+WheelDown::WheelRight
