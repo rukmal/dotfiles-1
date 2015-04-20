@@ -56,6 +56,9 @@ LAlt::return
 <!9::Send ^{9}
 <!0::Send ^{0}
 
+; Coding
+<!/::Send ^{/}
+
 ; Zoom
 !-::Send ^{-} ; Zoom out
 !=::Send ^{=} ; Zoom in

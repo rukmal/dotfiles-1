@@ -17,4 +17,7 @@
 	<+<!l::Send ^+{l}
 	<+<!p::Send ^+{p}
 	<!t::Send ^{p}
+	<#<!f::Send ^{h} ; Find and replace
+	<^<#Enter::Send ^!{Enter} ; Replace all
+
  }
