@@ -29,6 +29,7 @@ LAlt::return
 <!l::Send ^{l}  ; Focus location bar
 <!r::Send ^{r} ; Reload
 <!<+r::Send ^+{r} ; Flush reload
+<+<!j::Send ^{j} ; Reload
 
 <!t::Send ^{t} ; New tab
 <!<+t::Send ^+{t} ; Reopen closed tab
