@@ -15,6 +15,9 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 # disable mouse acceleration
 defaults write .GlobalPreferences com.apple.mouse.scaling -1
 
+# add sublime cli
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+
 # restart system services for changes to take effect
 killall Dock
 killall SystemUIServer
