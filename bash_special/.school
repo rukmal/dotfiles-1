@@ -1,6 +1,7 @@
-alias school='unison -batch -silent school'
+# alias school='unison -batch -silent school'
+alias school='cd ~/school'
 
-alias notes='cd ~/school/notes'
+# alias notes='cd ~/school/notes'
 
 alias 14au='cd ~/school/14au'
 alias 311='cd ~/school/14au/cse311'
@@ -12,6 +13,9 @@ alias 15wi='cd ~/school/15wi'
 alias 312='cd ~/school/15wi/cse312'
 alias 331='cd ~/school/15wi/cse331'
 alias 332='cd ~/school/15wi/cse332'
+
+alias 15sp='cd ~/school/15sp'
+alias 446='cd ~/school/15wi/cse446'
 
 # ==========================================
 # AMATH 583
