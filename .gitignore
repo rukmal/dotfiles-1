@@ -1,3 +1,4 @@
+*atom/storage/editor-*
 *.DS_Store*
 *.node-gyp*
 atom/.node-gyp/*
