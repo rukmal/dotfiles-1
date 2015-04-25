@@ -10,9 +10,6 @@ config windowHintsHeight 50
 
 alias hotkey ctrl;cmd
 
-#bind e:${hotkey} hint fjdksla;ghrueiwoqptyvncmx,z.
-
-# alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
 alias full corner top-left resize:screenSizeX;screenSizeY
 alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
 alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
@@ -23,6 +20,10 @@ alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
 alias tophalf corner top-left resize:screenSizeX;screenSizeY/2
 alias bottomhalf corner bottom-left resize:screenSizeX;screenSizeY/2
 
+alias monitor1full throw 0 resize
+alias monitor2full throw 1 resize
+alias monitor3full throw 2 resize
+
 bind m:cmd,shift ${full}
 bind ,:cmd,shift undo
 bind j:cmd,alt,shift ${lefthalf}
@@ -31,41 +32,31 @@ bind u:cmd,alt,shift ${tophalf}
 bind i:cmd,alt,shift ${bottomhalf}
 bind ;:cmd,alt,shift grid 1440x900:8,4 1920x1080:8,4  1080x1920:6,10
 
-# bind p:cmd,alt,shift move screenOriginX+333;screenOriginY 1019;1024
-# bind 1:cmd,alt,shift corner top-left resize:screenSizeX;screenSizeY 0
-# bind 2:cmd,alt,shift corner top-left resize:screenSizeX;screenSizeY 1
-# bind 3:cmd,alt,shift corner top-left resize:screenSizeX;screenSizeY 2
+# Make full screen on other monitors
+bind 1:cmd,alt,shift ${monitor1full}
+bind 2:cmd,alt,shift ${monitor2full}
+bind 3:cmd,alt,shift ${monitor3full}
 
-bind 1:cmd,alt,shift throw 0 resize
-bind 2:cmd,alt,shift throw 1 resize
-bind 3:cmd,alt,shift throw 2 resize
+bind 1:alt,shift ${monitor1full}
+bind 2:alt,shift ${monitor2full}
+bind 3:alt,shift ${monitor3full}
 
+# Move to other monitors
 bind 1:cmd,ctrl move screenOriginX+((screenSizeX-windowSizeX)/2);screenOriginY+((screenSizeY-windowSizeY)/2) windowSizeX;windowSizeY 0
 bind 2:cmd,ctrl move screenOriginX+((screenSizeX-windowSizeX)/2);screenOriginY+((screenSizeY-windowSizeY)/2) windowSizeX;windowSizeY 1
 bind 3:cmd,ctrl move screenOriginX+((screenSizeX-windowSizeX)/2);screenOriginY+((screenSizeY-windowSizeY)/2) windowSizeX;windowSizeY 2
 
-#### Snapshots
+# Summon by application
+bind q:alt,shift focus 'Sublime Text'
+bind w:alt,shift focus 'iTerm'
+bind e:alt,shift focus 'Google Chrome'
+
+bind a:alt,shift focus 'Slack'
+bind s:alt,shift focus 'Spotify'
+bind d:alt,shift focus 'Mailbox (Beta)'
+
+# Snapshots
 # bind 1:cmd,ctrl,alt,shift snapshot shotOne save-to-disk
 # bind 2:cmd,ctrl,alt,shift snapshot shotTwo save-to-disk
 # bind 1:cmd,alt,shift activate-snapshot shotOne
 # bind 2:cmd,alt,shift activate-snapshot shotTwo
-
-#### Open by application
-# bind c:${hotkey} sequence focus 'Google Chrome' > hide all-but:current
-# bind m:${hotkey} sequence focus 'Mail' > hide all-but:current
-# bind f:${hotkey} sequence focus 'Finder' > hide all-but:current
-# bind m:${hotkey} sequence focus 'iTunes' > hide all-but:current
-# bind s:${hotkey} sequence focus 'Skype' > hide all-but:current
-# bind t:${hotkey} sequence focus 'Sublime Text 2' > hide all-but:current
-
-#bind c:${hotkey} focus 'Google Chrome'
-#bind e:${hotkey} focus 'Mail'
-#bind f:${hotkey} focus 'Finder'
-#bind m:${hotkey} focus 'iTunes'
-#bind s:${hotkey} focus 'Skype'
-#bind t:${hotkey} focus 'Sublime Text 2'
-#bind v:${hotkey} focus 'VLC'
-
-#### For development where you need to create a 1280x800 window
-# alias smallmbp corner top-left resize:1280;800
-# bind ':cmd,alt,shift ${smallmbp}
