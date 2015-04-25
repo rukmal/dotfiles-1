@@ -8,8 +8,6 @@ config windowHintsFontSize 80
 config windowHintsWidth 50
 config windowHintsHeight 50
 
-alias hotkey ctrl;cmd
-
 alias full corner top-left resize:screenSizeX;screenSizeY
 alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
 alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
@@ -24,6 +22,8 @@ alias monitor1full throw 0 resize
 alias monitor2full throw 1 resize
 alias monitor3full throw 2 resize
 
+alias hotkey alt,shift
+
 bind m:cmd,shift ${full}
 bind ,:cmd,shift undo
 bind j:cmd,alt,shift ${lefthalf}
@@ -37,9 +37,17 @@ bind 1:cmd,alt,shift ${monitor1full}
 bind 2:cmd,alt,shift ${monitor2full}
 bind 3:cmd,alt,shift ${monitor3full}
 
-bind 1:alt,shift ${monitor1full}
-bind 2:alt,shift ${monitor2full}
-bind 3:alt,shift ${monitor3full}
+# Rebinds
+bind m:${hotkey} ${full}
+bind ,:${hotkey} undo
+bind 1:${hotkey} ${monitor1full}
+bind 2:${hotkey} ${monitor2full}
+bind 3:${hotkey} ${monitor3full}
+bind j:${hotkey} ${lefthalf}
+bind k:${hotkey} ${righthalf}
+bind u:${hotkey} ${tophalf}
+bind i:${hotkey} ${bottomhalf}
+bind ;:${hotkey} grid 1440x900:8,4 1920x1080:8,4  1080x1920:6,10
 
 # Move to other monitors
 bind 1:cmd,ctrl move screenOriginX+((screenSizeX-windowSizeX)/2);screenOriginY+((screenSizeY-windowSizeY)/2) windowSizeX;windowSizeY 0
