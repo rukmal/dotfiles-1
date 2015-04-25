@@ -55,13 +55,15 @@ bind 2:cmd,ctrl move screenOriginX+((screenSizeX-windowSizeX)/2);screenOriginY+(
 bind 3:cmd,ctrl move screenOriginX+((screenSizeX-windowSizeX)/2);screenOriginY+((screenSizeY-windowSizeY)/2) windowSizeX;windowSizeY 2
 
 # Summon by application
-bind q:alt,shift focus 'Sublime Text'
-bind w:alt,shift focus 'iTerm'
-bind e:alt,shift focus 'Google Chrome'
+alias appbind cmd,ctrl
 
-bind a:alt,shift focus 'Slack'
-bind s:alt,shift focus 'Spotify'
-bind d:alt,shift focus 'Mailbox (Beta)'
+bind q:${appbind} focus 'Sublime Text'
+bind w:${appbind} focus 'iTerm'
+bind e:${appbind} focus 'Google Chrome'
+
+bind a:${appbind} focus 'Slack'
+bind s:${appbind} focus 'Spotify'
+bind d:${appbind} focus 'Mailbox (Beta)'
 
 # Snapshots
 # bind 1:cmd,ctrl,alt,shift snapshot shotOne save-to-disk
