@@ -1,6 +1,3 @@
-# ==========================================
-# Aliases
-# ==========================================
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
@@ -8,8 +5,4 @@ alias v='mvim' # v to MacVim
 alias vi='mvim' # vi to MacVim
 alias mvi='mvim' # mvi to MacVim
 
-# ==========================================
-# Custom
-# ==========================================
-alias todoist='python ~/Code/todoist-cli/todoist.py'
-alias todo='python ~/Code/todoist-cli/todoist.py'
+alias todoist='python ~/code/todoist-cli/todoist.py'
