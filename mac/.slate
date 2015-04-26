@@ -55,7 +55,7 @@ bind 2:cmd,ctrl move screenOriginX+((screenSizeX-windowSizeX)/2);screenOriginY+(
 bind 3:cmd,ctrl move screenOriginX+((screenSizeX-windowSizeX)/2);screenOriginY+((screenSizeY-windowSizeY)/2) windowSizeX;windowSizeY 2
 
 # Summon by application
-alias appbind cmd,ctrl
+alias appbind shift,alt
 
 bind q:${appbind} focus 'Sublime Text'
 bind w:${appbind} focus 'iTerm'
