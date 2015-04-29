@@ -23,7 +23,7 @@ out/
 *.jar
 *.rar
 *.tar
-*.zip
+# *.zip
 *.apk
 *.ap_
 
