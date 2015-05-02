@@ -58,6 +58,12 @@ bind 3:cmd,ctrl move screenOriginX+((screenSizeX-windowSizeX)/2);screenOriginY+(
 alias appbind cmd,ctrl
 alias appbind2 alt,shift
 
+## Match my Windows config
+bind 1:alt focus 'Sublime Text'
+bind 2:alt focus 'Slack'
+bind 3:alt focus 'iTerm'
+bind 4:alt focus 'Google Chrome'
+
 bind q:${appbind} focus 'Sublime Text'
 bind w:${appbind} focus 'iTerm'
 bind e:${appbind} focus 'Google Chrome'
