@@ -62,16 +62,15 @@ alias makevenv='virtualenv --distribute env'
 alias startvenv='virtualenv --distribute env'
 
 alias venv='source env/bin/activate'
-
 alias deac='deactivate'
-alias deact='deactivate'
-alias deactiv='deactivate'
 
-alias oldmakevenv='virtualenv --distribute venv'
-alias oldvenv='source venv/bin/activate'
+## pypi
+alias pypyvenv='virtualenv env -p `which pypy`'
+alias pypyenv='virtualenv env -p `which pypy`'
 
 # PyPi
 alias pypisubmit='python setup.py register -r pypi'
+
 alias pypiregister='pypisubmit'
 alias pypinew='pypisubmit'
 alias pypicreate='pypisubmit'
