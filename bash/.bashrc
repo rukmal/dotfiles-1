@@ -56,6 +56,7 @@ alias jav='j'
 # Python
 # ==========================================
 alias py='python'
+alias p='pypy'
 
 # Virtualenv
 alias makevenv='virtualenv --distribute env'
