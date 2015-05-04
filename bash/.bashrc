@@ -269,8 +269,8 @@ alias ....='cd ../../../'
 alias .....='cd ../../../'
 alias ~='cd ~'
 
-alias p='pwd'
 alias pc='pwd | pbcopy' # Copy current working directory to clipboard
+
 function mkcd() {
         mkdir "$1";
         cd "$1";
