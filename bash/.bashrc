@@ -56,6 +56,7 @@ alias jav='j'
 # Python
 # ==========================================
 alias py='python'
+alias p='pypy'
 
 # Virtualenv
 alias makevenv='virtualenv --distribute env'
@@ -270,6 +271,7 @@ alias .....='cd ../../../'
 alias ~='cd ~'
 
 alias pc='pwd | pbcopy' # Copy current working directory to clipboard
+
 function mkcd() {
         mkdir "$1";
         cd "$1";
@@ -293,19 +295,6 @@ alias agr='sudo apt-get remove'
 alias agu='sudo apt-get update'
 alias acs='apt-cache search'
 alias yum='sudo yum'
-
-# ==========================================
-# AWS
-# ==========================================
-# if [ -f /usr/libexec/java_home ]; then
-#     export JAVA_HOME=$(/usr/libexec/java_home)
-#     export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.6.13.0
-#     export PATH=$PATH:$EC2_HOME/bin
-# fi
-
-# if [ -f ~/.aws_secret ]; then
-#     source ~/.aws_secret # get AWS secrets
-# fi
 
 # ==========================================
 # Automatically added
