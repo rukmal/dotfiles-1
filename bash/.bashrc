@@ -64,7 +64,8 @@ alias startvenv='virtualenv --distribute env'
 alias venv='source env/bin/activate'
 alias deac='deactivate'
 
-## pypi
+## PyPy
+alias p='pypy'
 alias pypyvenv='virtualenv env -p `which pypy`'
 alias pypyenv='virtualenv env -p `which pypy`'
 
@@ -268,7 +269,6 @@ alias ....='cd ../../../'
 alias .....='cd ../../../'
 alias ~='cd ~'
 
-alias p='pwd'
 alias pc='pwd | pbcopy' # Copy current working directory to clipboard
 function mkcd() {
         mkdir "$1";
