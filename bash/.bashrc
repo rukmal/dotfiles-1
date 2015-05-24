@@ -133,6 +133,16 @@ export PATH=$PATH:$GOPATH/bin
 alias mongod='mongod --dbpath data/'
 
 # ==========================================
+# MongoDB
+# ==========================================
+alias mariadb="cd '/usr/local/Cellar/mariadb/10.0.19' ; /usr/local/Cellar/mariadb/10.0.19/bin/mysqld_safe --datadir='/usr/local/var/mysql'"
+
+# ==========================================
+# Gogs
+# ==========================================
+alias gogs="~/bin/gogs/gogs"
+
+# ==========================================
 # Git
 # ==========================================
 alias gif='git fetch'
