@@ -124,8 +124,9 @@ function gulpgip() {
 # ==========================================
 # Go
 # ==========================================
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+if [ -f ~/.go ]; then
+    source ~/.go
+fi
 
 # ==========================================
 # MongoDB
