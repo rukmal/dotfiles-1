@@ -127,6 +127,9 @@ function gulpgip() {
 if [ -f ~/.go ]; then
     source ~/.go
 fi
+if [ -f ~/.go_rpi ]; then
+    source ~/.go_rpi
+fi
 
 # ==========================================
 # MongoDB
