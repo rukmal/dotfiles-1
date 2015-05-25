@@ -1,0 +1,5 @@
+if [ -d /usr/local/go ]; then
+  export GOROOT=/usr/local/go
+  export GOPATH=$HOME/srcs/go
+  export PATH=$PATH:$GOROOT/bin
+fi
