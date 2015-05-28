@@ -130,6 +130,9 @@ fi
 if [ -f ~/.go_rpi ]; then
     source ~/.go_rpi
 fi
+if [ -f ~/.go_do ]; then
+    source ~/.go_do
+fi
 
 # ==========================================
 # MongoDB
