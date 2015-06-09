@@ -23,4 +23,7 @@
 	<#<!f::Send ^{h} ; Find and replace
 	<^<#Enter::Send ^!{Enter} ; Replace all
 
+	<+<!d::Send ^+{d}
+	<^<!Up::Send ^+{Up}
+	<^<!Down::Send ^+{Down}
  }
