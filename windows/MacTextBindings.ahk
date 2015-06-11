@@ -1,6 +1,6 @@
 ; Text editing
 ;; Alt/Opt + ?
-;;;; Alt+Up/Down behavior is difficult to mimick
+;;;; Alt+Up/Down behavior is difficult to mimic
 ;<#Up::Send {Up}
 ;<#Down::Send {Down}
 <#Left::Send ^{Left}
