@@ -4,3 +4,6 @@
 [submodule "sublime"]
 	path = sublime
 	url = git@github.com:christophersu/sublime.git
+[submodule "mac/iterm"]
+	path = mac/iterm
+	url = git@github.com:christophersu/iterm.git
