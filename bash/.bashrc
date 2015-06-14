@@ -37,6 +37,16 @@ if [ -f ~/.fortran ]; then
     source ~/.fortran
 fi
 
+### Go
+if [ -f ~/.golang ]; then
+    source ~/.golang
+fi
+
+### Dart
+if [ -f ~/.dart ]; then
+    source ~/.dart
+fi
+
 # ==========================================
 # Text Editing
 # ==========================================
@@ -120,19 +130,6 @@ function gulpgip() {
     git commit -m "$1";
     git push origin $2;
 }
-
-# ==========================================
-# Go
-# ==========================================
-if [ -f ~/.go ]; then
-    source ~/.go
-fi
-if [ -f ~/.go_rpi ]; then
-    source ~/.go_rpi
-fi
-if [ -f ~/.go_do ]; then
-    source ~/.go_do
-fi
 
 # ==========================================
 # MongoDB
