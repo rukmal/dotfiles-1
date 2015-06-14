@@ -12,6 +12,9 @@
 	<!9::Send !{9}
 	<!0::Send !{0}
 
+	; Clicking!
+	!LButton::Send ^{LButton}
+
 	; Restore other Mac hotkeys
 	<^<!g::Send !{F3}
 	<+<!l::Send ^+{l}
@@ -20,4 +23,7 @@
 	<#<!f::Send ^{h} ; Find and replace
 	<^<#Enter::Send ^!{Enter} ; Replace all
 
+	<+<!d::Send ^+{d}
+	<^<!Up::Send ^+{Up}
+	<^<!Down::Send ^+{Down}
  }
