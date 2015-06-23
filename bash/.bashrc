@@ -1,5 +1,5 @@
 # Start tmux with every shell
-[[ $TERM != "screen" ]] && exec tmux
+#[[ $TERM != "screen" ]] && exec tmux
 
 # ==========================================
 # Includes
@@ -19,11 +19,6 @@ fi
 
 if [ -f ~/.hcrlab ]; then
     source ~/.hcrlab
-fi
-
-### Work
-if [ -f ~/.work ]; then
-    source ~/.work
 fi
 
 ### Mac
