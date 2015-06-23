@@ -21,6 +21,11 @@ if [ -f ~/.hcrlab ]; then
     source ~/.hcrlab
 fi
 
+### Work
+if [ -f ~/.work ]; then
+    source ~/.work
+fi
+
 ### Mac
 if [ -f ~/.mac ]; then
     source ~/.mac
