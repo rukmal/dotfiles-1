@@ -1,3 +1,6 @@
+# Start tmux with every shell
+#[[ $TERM != "screen" ]] && exec tmux
+
 # ==========================================
 # Includes
 # ==========================================
@@ -16,11 +19,6 @@ fi
 
 if [ -f ~/.hcrlab ]; then
     source ~/.hcrlab
-fi
-
-### Work
-if [ -f ~/.work ]; then
-    source ~/.work
 fi
 
 ### Mac
@@ -137,12 +135,17 @@ function gulpgip() {
 }
 
 # ==========================================
+# Ruby
+# ==========================================
+eval "$(rbenv init -)"
+
+# ==========================================
 # MongoDB
 # ==========================================
 alias mongod='mongod --dbpath data/'
 
 # ==========================================
-# MongoDB
+# MariaDB
 # ==========================================
 alias mariadb="cd '/usr/local/Cellar/mariadb/10.0.19' ; /usr/local/Cellar/mariadb/10.0.19/bin/mysqld_safe --datadir='/usr/local/var/mysql'"
 
@@ -307,24 +310,9 @@ alias agr='sudo apt-get remove'
 alias agu='sudo apt-get update'
 alias acs='apt-cache search'
 alias yum='sudo yum'
-
-# ==========================================
-# AWS
-# ==========================================
-# if [ -f /usr/libexec/java_home ]; then
-#     export JAVA_HOME=$(/usr/libexec/java_home)
-#     export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.6.13.0
-#     export PATH=$PATH:$EC2_HOME/bin
-# fi
-
-# if [ -f ~/.aws_secret ]; then
-#     source ~/.aws_secret # get AWS secrets
-# fi
-
 # ==========================================
 # Automatically added
 # ==========================================
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
-# export PATH=/usr/local/share/python:$PATH
