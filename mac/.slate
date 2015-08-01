@@ -24,6 +24,7 @@ alias monitor3full throw 2 resize
 
 alias hotkey alt,shift
 
+bind `:${hotkey} ${full}
 bind m:cmd,shift ${full}
 bind ,:cmd,shift undo
 bind j:cmd,alt,shift ${lefthalf}
