@@ -1,11 +1,17 @@
-# Start tmux with every shell
-#[[ $TERM != "screen" ]] && exec tmux
-
 # ==========================================
 # Includes
 # ==========================================
 if [ -f /etc/bashrc ]; then
   . /etc/bashrc
+fi
+
+### Custom
+if [ -f ~/.custom ]; then
+    source ~/.custom
+fi
+
+if [ -f ~/.other ]; then
+    source ~/.other
 fi
 
 ### School
@@ -30,11 +36,6 @@ if [ -f ~/.aws ]; then
     source ~/.aws
 fi
 
-### Make a Jekyll post
-if [ -f ~/.jekyll ]; then
-    source ~/.jekyll
-fi
-
 ### Fortan
 if [ -f ~/.fortran ]; then
     source ~/.fortran
@@ -50,20 +51,10 @@ if [ -f ~/.dart ]; then
     source ~/.dart
 fi
 
-# ==========================================
-# Text Editing
-# ==========================================
-alias resume='cd ~/Dropbox/Career/Resume && make resume'
-
-# ==========================================
-# Java
-# ==========================================
-function j() {
-    javac $1.java
-    java $1
-}
-alias ja='j'
-alias jav='j'
+### Java
+if [ -f ~/.java ]; then
+    source ~/.java
+fi
 
 # ==========================================
 # Python
@@ -296,10 +287,6 @@ function mkcd() {
 alias path='echo -e ${PATH//:/\\n}'
 
 # Common directories
-alias code='cd ~/code'
-alias dotfiles='cd ~/code/dotfiles'
-alias csu.='cd ~/code/csu.github.io'
-alias dropbox='cd ~/Dropbox'
 alias host='vim ~/etc/hosts'
 
 # ==========================================
@@ -310,6 +297,7 @@ alias agr='sudo apt-get remove'
 alias agu='sudo apt-get update'
 alias acs='apt-cache search'
 alias yum='sudo yum'
+
 # ==========================================
 # Automatically added
 # ==========================================
