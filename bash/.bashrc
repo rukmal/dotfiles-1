@@ -6,6 +6,16 @@ if [ -f /etc/bashrc ]; then
 fi
 
 ### Custom
+for f in `find ~/.dotfiles -not -type d`
+do
+   source $f
+done
+
+for f in `find ~/dotfiles -not -type d`
+do
+   source $f
+done
+
 if [ -f ~/.custom ]; then
     source ~/.custom
 fi
@@ -14,67 +24,46 @@ if [ -f ~/.other ]; then
     source ~/.other
 fi
 
-### School
-if [ -f ~/.uwcse ]; then
-    source ~/.uwcse
+# ==========================================
+# PS1
+# ==========================================
+## Function to get the current git branch
+function parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+export CLICOLOR=1
+
+if [ -d "/Users/christophersu" ]; then
+    # On local mac
+    PS1="\[\e[0;32m\]csu:\W\[\033[0;34m\]\$(parse_git_branch)\[\033[0m\]$ "
+else
+    # On some other machine
+    PS1="\[\e[0;32m\]csu@\h:\W\[\033[0;34m\]\$(parse_git_branch)\[\033[0m\]$ "
 fi
 
-if [ -f ~/.school ]; then
-    source ~/.school
-fi
-
-if [ -f ~/.hcrlab ]; then
-    source ~/.hcrlab
-fi
-
-### Misc
-if [ -f ~/.mac ]; then
-    source ~/.mac
-fi
-
-if [ -f ~/.aws ]; then
-    source ~/.aws
-fi
-
-### Languages
-if [ -f ~/.fortran ]; then
-    source ~/.fortran
-fi
-
-if [ -f ~/.golang ]; then
-    source ~/.golang
-fi
-
-if [ -f ~/.dart ]; then
-    source ~/.dart
-fi
-
-if [ -f ~/.java ]; then
-    source ~/.java
-fi
-
-if [ -f ~/.python ]; then
-    source ~/.python
-fi
-
-if [ -f ~/.node ]; then
-    source ~/.node
-fi
+export PS1
 
 # ==========================================
-# Ruby
+# Navigation
 # ==========================================
-eval "$(rbenv init -)"
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../'
+alias ~='cd ~'
 
-# ==========================================
-# MongoDB
-# ==========================================
-alias mongod='mongod --dbpath data/'
+alias pc='pwd | pbcopy' # Copy current working directory to clipboard
+function mkcd() {
+        mkdir "$1";
+        cd "$1";
+}
 
-# ==========================================
-# MariaDB
-# ==========================================
-alias mariadb="cd '/usr/local/Cellar/mariadb/10.0.19' ; /usr/local/Cellar/mariadb/10.0.19/bin/mysqld_safe --datadir='/usr/local/var/mysql'"
+# Echo
+alias path='echo -e ${PATH//:/\\n}'
+
+# Common directories
+alias host='vim ~/etc/hosts'
 
 # ==========================================
 # Git
@@ -183,47 +172,6 @@ export LSCOLORS=Exfxcxdxbxegedabagacad
 
 # Tell grep to highlight matches
 export GREP_OPTIONS='--color=auto'
-
-# ==========================================
-# PS1
-# ==========================================
-## Function to get the current git branch
-function parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
-export CLICOLOR=1
-
-if [ -d "/Users/christophersu" ]; then
-    # On local mac
-    PS1="\[\e[0;32m\]csu:\W\[\033[0;34m\]\$(parse_git_branch)\[\033[0m\]$ "
-else
-    # On some other machine
-    PS1="\[\e[0;32m\]csu@\h:\W\[\033[0;34m\]\$(parse_git_branch)\[\033[0m\]$ "
-fi
-
-export PS1
-
-# ==========================================
-# Navigation
-# ==========================================
-alias ..='cd ..'
-alias ...='cd ../../'
-alias ....='cd ../../../'
-alias .....='cd ../../../'
-alias ~='cd ~'
-
-alias pc='pwd | pbcopy' # Copy current working directory to clipboard
-function mkcd() {
-        mkdir "$1";
-        cd "$1";
-}
-
-# Echo
-alias path='echo -e ${PATH//:/\\n}'
-
-# Common directories
-alias host='vim ~/etc/hosts'
 
 # ==========================================
 # Packages
