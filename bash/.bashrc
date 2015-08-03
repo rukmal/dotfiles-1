@@ -27,7 +27,7 @@ if [ -f ~/.hcrlab ]; then
     source ~/.hcrlab
 fi
 
-### Mac
+### Misc
 if [ -f ~/.mac ]; then
     source ~/.mac
 fi
@@ -36,94 +36,30 @@ if [ -f ~/.aws ]; then
     source ~/.aws
 fi
 
-### Fortan
+### Languages
 if [ -f ~/.fortran ]; then
     source ~/.fortran
 fi
 
-### Go
 if [ -f ~/.golang ]; then
     source ~/.golang
 fi
 
-### Dart
 if [ -f ~/.dart ]; then
     source ~/.dart
 fi
 
-### Java
 if [ -f ~/.java ]; then
     source ~/.java
 fi
 
-# ==========================================
-# Python
-# ==========================================
-alias py='python'
+if [ -f ~/.python ]; then
+    source ~/.python
+fi
 
-# Virtualenv
-alias makevenv='virtualenv --distribute env'
-alias startvenv='virtualenv --distribute env'
-
-alias venv='source env/bin/activate'
-alias deac='deactivate'
-
-## PyPy
-alias p='pypy'
-alias pypyvenv='virtualenv env -p `which pypy`'
-alias pypyenv='virtualenv env -p `which pypy`'
-
-# PyPi
-alias pypisubmit='python setup.py register -r pypi'
-
-alias pypiregister='pypisubmit'
-alias pypinew='pypisubmit'
-alias pypicreate='pypisubmit'
-
-alias pypiupdate='python setup.py sdist upload'
-alias pypiupload='pypiupdate'
-
-# Pip
-function pipupdate() {
-    pip install --upgrade "$1" && pip freeze > requirements.txt
-}
-alias pipupgrade='pipupdate'
-
-alias pipfreeze='pip freeze > requirements.txt'
-alias pif='pipfreeze'
-
-function pipinstall() {
-    if [ $# -eq 0 ]
-        then
-            pip install -r requirements.txt
-        else
-            pip install -r "$1"
-    fi
-}
-
-# ==========================================
-# Node
-# ==========================================
-export PATH=/usr/local/share/npm/bin:$PATH
-
-# package.json
-alias npmsave='npm update --save'
-
-function npmdev() {
-    npm install --save-dev $1
-}
-
-# Gulp
-alias setgulp='npm init && npm install --save-dev gulp'
-alias gulpinit='npm init && npm install --save-dev gulp'
-
-
-function gulpgip() {
-    gulp;
-    git add -A;
-    git commit -m "$1";
-    git push origin $2;
-}
+if [ -f ~/.node ]; then
+    source ~/.node
+fi
 
 # ==========================================
 # Ruby

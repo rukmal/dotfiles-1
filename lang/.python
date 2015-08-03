@@ -1,0 +1,44 @@
+# ==========================================
+# Python
+# ==========================================
+alias py='python'
+
+# Virtualenv
+alias makevenv='virtualenv --distribute env'
+alias startvenv='virtualenv --distribute env'
+
+alias venv='source env/bin/activate'
+alias deac='deactivate'
+
+## PyPy
+alias p='pypy'
+alias pypyvenv='virtualenv env -p `which pypy`'
+alias pypyenv='virtualenv env -p `which pypy`'
+
+# PyPi
+alias pypisubmit='python setup.py register -r pypi'
+
+alias pypiregister='pypisubmit'
+alias pypinew='pypisubmit'
+alias pypicreate='pypisubmit'
+
+alias pypiupdate='python setup.py sdist upload'
+alias pypiupload='pypiupdate'
+
+# Pip
+function pipupdate() {
+    pip install --upgrade "$1" && pip freeze > requirements.txt
+}
+alias pipupgrade='pipupdate'
+
+alias pipfreeze='pip freeze > requirements.txt'
+alias pif='pipfreeze'
+
+function pipinstall() {
+    if [ $# -eq 0 ]
+        then
+            pip install -r requirements.txt
+        else
+            pip install -r "$1"
+    fi
+}
