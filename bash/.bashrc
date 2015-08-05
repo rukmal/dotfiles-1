@@ -6,14 +6,13 @@ if [ -f /etc/bashrc ]; then
 fi
 
 ### Custom
-for f in `find ~/.dotfiles -not -type d`
-do
-   source $f
-done
-
-for f in `find ~/dotfiles -not -type d`
-do
-   source $f
+for i in "~/.dotfiles" "~/dotfiles"; do
+    if [ -d "$i" ]; then
+        for f in `find "$i" -not -type d`
+        do
+           source $f
+        done
+    fi
 done
 
 if [ -f ~/.custom ]; then
