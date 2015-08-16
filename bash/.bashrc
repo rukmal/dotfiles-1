@@ -172,15 +172,6 @@ export LSCOLORS=Exfxcxdxbxegedabagacad
 export GREP_OPTIONS='--color=auto'
 
 # ==========================================
-# Packages
-# ==========================================
-alias agi='sudo apt-get install'
-alias agr='sudo apt-get remove'
-alias agu='sudo apt-get update'
-alias acs='apt-cache search'
-alias yum='sudo yum'
-
-# ==========================================
 # Automatically added
 # ==========================================
 export PATH=/usr/local/bin:$PATH
