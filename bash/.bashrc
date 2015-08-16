@@ -172,6 +172,6 @@ export LSCOLORS=Exfxcxdxbxegedabagacad
 export GREP_OPTIONS='--color=auto'
 
 # ==========================================
-# Automatically added
+# Path
 # ==========================================
 export PATH=/usr/local/bin:$PATH
