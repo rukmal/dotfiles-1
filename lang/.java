@@ -2,6 +2,10 @@
 # Java
 # ==========================================
 function j() {
+    if [ -e "$1.class" ]
+    then
+        rm "$1.class"
+    fi
     javac $1.java
     java $1
 }
