@@ -78,10 +78,10 @@ IWhite='\[\e[0;97m\]'       # White
 
 if [ -d "/Users/christophersu" ]; then
     # On local mac
-    PS1="${IBlue}csu${txtgrn}:\W\[\033[0;34m\]\$(parse_git_branch)\[\033[0m\]$ "
+    PS1="${txtblu}csu:${txtgrn}\W${txtblu}\$(parse_git_branch)${IPurple}$ ${txtrst}"
 else
     # On some other machine
-    PS1="${IGreen}csu${txtblu}@${IGreen}\h${txtblu}:${txtgrn}\W${txtblu}\$(parse_git_branch)${IPurple}$ ${txtrst}"
+    PS1="${txtblu}csu@${bldblu}\h${txtblu}:${txtgrn}\W${txtblu}\$(parse_git_branch)${IPurple}$ ${txtrst}"
 fi
 
 export PS1
