@@ -81,7 +81,7 @@ if [ -d "/Users/christophersu" ]; then
     PS1="${txtblu}csu:${txtgrn}\W${txtblu}\$(parse_git_branch)${IPurple}$ ${txtrst}"
 else
     # On some other machine
-    PS1="${txtblu}csu@${bldblu}\h${txtblu}:${txtgrn}\W${txtblu}\$(parse_git_branch)${IPurple}$ ${txtrst}"
+    PS1="${txtblu}csu${bldblu}@\h${txtblu}:${txtgrn}\W${txtblu}\$(parse_git_branch)${IPurple}$ ${txtrst}"
 fi
 
 export PS1
