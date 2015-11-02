@@ -1,0 +1,1 @@
+alias swipl='/Applications/SWI-Prolog.app/Contents/MacOS/swipl'
