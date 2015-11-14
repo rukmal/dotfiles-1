@@ -1,14 +1,21 @@
 rsyncdest="csu@attu.cs.washington.edu"
 
-
 function rpush() {
-    localdir="$(pwd)/$1/"
-    remotedir="${localdir/\/Users\/christophersu//homes/iws/csu}"
-    rsync -azP --delete "$1/" "$rsyncdest:$remotedir"
+    if [ "$1" != "" ]; then
+        localdir="$(pwd)/$1/"
+        remotedir="${localdir/\/Users\/christophersu//homes/iws/csu}"
+        rsync -azP --delete "$1/" "$rsyncdest:$remotedir"
+    else
+        echo "Requires one argument."
+    fi
 }
 
 function rpull() {
-    localdir="$(pwd)/$1/"
-    remotedir="${localdir/\/Users\/christophersu//homes/iws/csu}"
-    rsync -azP --delete "$rsyncdest:$remotedir" "$1/"
+    if [ "$1" != "" ]; then
+        localdir="$(pwd)/$1/"
+        remotedir="${localdir/\/Users\/christophersu//homes/iws/csu}"
+        rsync -azP --delete "$rsyncdest:$remotedir" "$1/"
+    else
+        echo "Requires one argument."
+    fi
 }
