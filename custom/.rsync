@@ -1,13 +1,14 @@
 rsyncdest="csu@attu.cs.washington.edu"
 
-function rpull() {
-    localdir=$(pwd)
-    remotedir="${localdir/\/Users\/christophersu//homes/iws/csu}"
-    rsync -azP --delete "$rsyncdest:$remotedir" "$localdir"
-}
 
 function rpush() {
-    localdir=$(pwd)
+    localdir="$(pwd)/$1/"
     remotedir="${localdir/\/Users\/christophersu//homes/iws/csu}"
-    rsync -azP --delete "$localdir" "$rsyncdest:$remotedir"
+    rsync -azP --delete "$1/" "$rsyncdest:$remotedir"
+}
+
+function rpull() {
+    localdir="$(pwd)/$1/"
+    remotedir="${localdir/\/Users\/christophersu//homes/iws/csu}"
+    rsync -azP --delete "$rsyncdest:$remotedir" "$1/"
 }

@@ -13,16 +13,3 @@ alias 332='cd ~/school/15wi/cse332'
 
 alias 15sp='cd ~/school/15sp'
 alias 446='cd ~/school/15sp/cse446'
-
-# rsync
-function rpush() {
-    localdir="$(pwd)/$1"
-    remotedir="${localdir/\/Users\/christophersu//homes/iws/csu}"
-    rsync -azP --delete "$1/" "csu@attu.cs.washington.edu:$remotedir"
-}
-
-function rpull() {
-    localdir="$(pwd)/$1"
-    remotedir="${localdir/\/Users\/christophersu//homes/iws/csu}"
-    rsync -azP --delete "csu@attu.cs.washington.edu:$remotedir" "$1/"
-}
