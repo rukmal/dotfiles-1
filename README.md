@@ -1,2 +1,2 @@
 # dotfiles
-My config files.
+csu's config files.
