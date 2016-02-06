@@ -24,7 +24,6 @@ alias monitor3full throw 2 resize
 
 alias hotkey alt,shift
 
-bind `:${hotkey} ${full}
 bind m:cmd,shift ${full}
 bind ,:cmd,shift undo
 bind j:cmd,alt,shift ${lefthalf}
@@ -34,13 +33,16 @@ bind i:cmd,alt,shift ${bottomhalf}
 bind ;:cmd,alt,shift grid 1440x900:8,4 1920x1080:8,4  1080x1920:6,10
 
 # Make full screen on other monitors
-bind 1:${hotkey} ${monitor1full}
-bind 2:${hotkey} ${monitor2full}
-bind 3:${hotkey} ${monitor3full}
+bind 1:cmd,alt,shift ${monitor1full}
+bind 2:cmd,alt,shift ${monitor2full}
+bind 3:cmd,alt,shift ${monitor3full}
 
 # Rebinds
 bind m:${hotkey} ${full}
 bind ,:${hotkey} undo
+bind 1:${hotkey} ${monitor1full}
+bind 2:${hotkey} ${monitor2full}
+bind 3:${hotkey} ${monitor3full}
 bind j:${hotkey} ${lefthalf}
 bind k:${hotkey} ${righthalf}
 bind u:${hotkey} ${tophalf}
@@ -57,23 +59,23 @@ alias appbind cmd,ctrl
 alias appbind2 alt,shift
 
 ## Match my Windows config
-bind 1:alt focus 'Sublime Text'
-bind 2:alt focus 'Slack'
-bind 3:alt focus 'iTerm'
-bind 4:alt focus 'Google Chrome'
-
-bind q:${appbind} focus 'Sublime Text'
-bind w:${appbind} focus 'iTerm'
-bind e:${appbind} focus 'Google Chrome'
-
-bind a:${appbind} focus 'Slack'
-bind s:${appbind} focus 'Spotify'
-bind f:${appbind} focus 'Mailbox (Beta)'
-
-bind q:${appbind2} focus 'Sublime Text'
-bind w:${appbind2} focus 'iTerm'
-bind e:${appbind2} focus 'Google Chrome'
-
-bind a:${appbind2} focus 'Slack'
-bind s:${appbind2} focus 'Spotify'
-bind f:${appbind2} focus 'Mailbox (Beta)'
+# bind 1:alt focus 'Sublime Text'
+# bind 2:alt focus 'Slack'
+# bind 3:alt focus 'iTerm'
+# bind 4:alt focus 'Google Chrome'
+# 
+# bind q:${appbind} focus 'Sublime Text'
+# bind w:${appbind} focus 'iTerm'
+# bind e:${appbind} focus 'Google Chrome'
+# 
+# bind a:${appbind} focus 'Slack'
+# bind s:${appbind} focus 'Spotify'
+# bind f:${appbind} focus 'Mailbox (Beta)'
+# 
+# bind q:${appbind2} focus 'Sublime Text'
+# bind w:${appbind2} focus 'iTerm'
+# bind e:${appbind2} focus 'Google Chrome'
+# 
+# bind a:${appbind2} focus 'Slack'
+# bind s:${appbind2} focus 'Spotify'
+# bind f:${appbind2} focus 'Mailbox (Beta)'
