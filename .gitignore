@@ -6,5 +6,4 @@ atom/.node-gyp/*
 *.pyc
 */storage/*
 *cache*
-vim/bundle/gundo
 *.netrwhist*
