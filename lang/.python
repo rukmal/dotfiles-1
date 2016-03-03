@@ -31,14 +31,14 @@ function pipupdate() {
 }
 alias pipupgrade='pipupdate'
 
-alias pipfreeze='pip freeze > requirements.txt'
+# alias pipfreeze='pip freeze > requirements.txt'
 alias pif='pipfreeze'
 
 function pipinstall() {
     if [ $# -eq 0 ]
         then
-            pip install -r requirements.txt
+            pip install -r requirements.txt --upgrade
         else
-            pip install -r "$1"
+            pip install -r "$1" --upgrade
     fi
 }
