@@ -97,8 +97,8 @@ alias ~='cd ~'
 
 alias pc='pwd | pbcopy' # Copy current working directory to clipboard
 function mkcd() {
-        mkdir "$1";
-        cd "$1";
+    mkdir "$1";
+    cd "$1";
 }
 
 # Echo
@@ -118,6 +118,7 @@ alias gih='git push heroku master'
 alias gil='git pull'
 alias gipset='git push --set-upstream origin master'
 alias setgip='git push --set-upstream origin master'
+alias gipa='git remote | xargs -L1 git push'
 
 function gip() {
     git add -A
@@ -219,3 +220,5 @@ export GREP_OPTIONS='--color=auto'
 # Path
 # ==========================================
 export PATH=/usr/local/bin:$PATH
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
