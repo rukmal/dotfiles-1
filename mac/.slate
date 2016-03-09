@@ -45,8 +45,8 @@ bind 2:${hotkey} ${monitor2full}
 bind 3:${hotkey} ${monitor3full}
 bind j:${hotkey} ${lefthalf}
 bind k:${hotkey} ${righthalf}
-bind u:${hotkey} ${tophalf}
-bind i:${hotkey} ${bottomhalf}
+# bind u:${hotkey} ${tophalf}
+# bind i:${hotkey} ${bottomhalf}
 bind ;:${hotkey} grid 1440x900:8,4 1920x1080:8,4  1080x1920:6,10
 
 # Move to other monitors
