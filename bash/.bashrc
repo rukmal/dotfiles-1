@@ -172,6 +172,9 @@ function gim() {
     git merge "$1"
 }
 
+# gitignore
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+
 # ==========================================
 # Misc
 # ==========================================
