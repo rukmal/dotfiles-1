@@ -32,7 +32,7 @@ function pipupdate() {
 alias pipupgrade='pipupdate'
 
 # alias pipfreeze='pip freeze > requirements.txt'
-alias pif='pipfreeze'
+alias pif='pip freeze > requirements.txt'
 
 function pipinstall() {
     if [ $# -eq 0 ]
