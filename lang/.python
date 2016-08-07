@@ -31,14 +31,43 @@ function pipupdate() {
 }
 alias pipupgrade='pipupdate'
 
-# alias pipfreeze='pip freeze > requirements.txt'
+alias pipfreeze='pip freeze > requirements.txt'
 alias pif='pipfreeze'
 
 function pipinstall() {
     if [ $# -eq 0 ]
         then
-            pip install -r requirements.txt --upgrade
+            pip install -r requirements.txt
         else
-            pip install -r "$1" --upgrade
+            pip install -r "$1"
+    fi
+}
+
+# ==========================================
+# Python 3
+# ==========================================
+alias py3='python3'
+
+# PyPi3
+alias pypisubmit3='python3 setup.py register -r pypi'
+
+alias pypiupdate='python3 setup.py sdist upload'
+alias pypiupload='pypiupdate'
+
+# pip3
+function pipupdate3() {
+    pip3 install --upgrade "$1" && pip freeze > requirements.txt
+}
+alias pipupgrade3='pipupdate3'
+
+alias pipfreeze3='pip3 freeze > requirements.txt'
+alias pif3='pipfreeze3'
+
+function pipinstall3() {
+    if [ $# -eq 0 ]
+        then
+            pip install -r requirements.txt
+        else
+            pip install -r "$1"
     fi
 }
