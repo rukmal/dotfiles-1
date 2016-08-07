@@ -42,6 +42,8 @@ function pipinstall() {
             pip install -r "$1"
     fi
 }
+alias pipi='pipinstall'
+alias pipinst='pipinstall'
 
 # ==========================================
 # Python 3
@@ -71,3 +73,5 @@ function pipinstall3() {
             pip install -r "$1"
     fi
 }
+alias pipi3='pipinstall3'
+alias pipinst3='pipinstall3'
