@@ -1,7 +1,8 @@
 # ==========================================
 # Node
 # ==========================================
-export PATH=/usr/local/share/npm/bin:$PATH
+# export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=~/.npm-global/bin:$PATH
 
 # package.json
 alias npmsave='npm update --save'
