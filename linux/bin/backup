@@ -1,0 +1,9 @@
+#!/bin/bash
+DEST="/media/backup-xps-linux"
+EXCLUDE_FILE="/home/csu/code/dotfiles/linux/backup-exclude.txt"
+
+# Dry run:
+# rsync -aAXv --dry-run --delete --exclude-from "$EXCLUDE_FILE" / $DEST
+
+# Actual backup:
+rsync -aAX --info=progress2 --delete --exclude-from "$EXCLUDE_FILE" / $DEST
