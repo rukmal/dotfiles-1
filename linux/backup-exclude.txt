@@ -9,6 +9,11 @@
 /sys/*
 /tmp/*
 /usr/lib/node_modules/*
+/var/cache/*
+/var/crash/*
+/var/lock/*
+/var/log/*
+/var/tmp/*
 /home/*/.bundle/*
 /home/*/.cache/chromium/*
 /home/*/.cache/google-chrome/*
@@ -23,6 +28,6 @@
 /home/*/.thumbnails/*
 /home/*/code/*/_site/*
 /home/*/code/*/env/*
-/home/*/code/*/venv/*
 /home/*/code/*/node_modules/*
 /home/*/code/*/out/*
+/home/*/code/*/venv/*
