@@ -1,5 +1,5 @@
 #!/bin/bash
-DEST="/media/backup-xps-linux"
+DEST="rsync://bastion.local/backup-xps-linux/latest"
 EXCLUDE_FILE="/home/csu/bin/backup-exclude.txt"
 
 # Dry run:
