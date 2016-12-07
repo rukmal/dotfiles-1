@@ -1,12 +1,42 @@
 {
-    "color_scheme": "Packages/Base16 Color Schemes/Themes/base16-eighties.tmTheme",
+    "color_scheme": "Packages/Base16 Color Schemes/Themes/base16-oceanicnext.tmTheme",
+    "file_exclude_patterns":
+    [
+        "*.pyc",
+        "*.pyo",
+        "*.exe",
+        "*.dll",
+        "*.obj",
+        "*.o",
+        "*.a",
+        "*.lib",
+        "*.so",
+        "*.dylib",
+        "*.ncb",
+        "*.sdf",
+        "*.suo",
+        "*.pdb",
+        "*.idb",
+        ".DS_Store",
+        "*.class",
+        "*.psd",
+        "*.db",
+        "*.sublime-workspace",
+        "*.err",
+        "*.wrn"
+    ],
+    "font_face": "Source Code Pro",
+    "font_options":
+    [
+        "directwrite"
+    ],
     "font_size": 14,
-    "tab_size": 4,
-    "translate_tabs_to_spaces": true,
-    "remember_open_files": false,
-    "hot_exit": false,
     "ignored_packages":
     [
         "Vintage"
-    ]
+    ],
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "remember_open_files": false,
+    "hot_exit": false
 }
