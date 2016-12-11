@@ -173,7 +173,7 @@ function gim() {
 }
 
 # gitignore
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+function gi() { curl -L -s https://www.gitignore.io/api/$@  | sed '/gitignore.io/d' ;}
 
 # ==========================================
 # Misc
