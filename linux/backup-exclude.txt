@@ -31,3 +31,4 @@
 /home/*/code/*/node_modules/*
 /home/*/code/*/out/*
 /home/*/code/*/venv/*
+/home/*/Dropbox/*
