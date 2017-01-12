@@ -7,7 +7,16 @@ alias py='python'
 alias makevenv='virtualenv --distribute env'
 alias startvenv='virtualenv --distribute env'
 
-alias venv='source env/bin/activate'
+function venv() {
+    if [ $# -eq 0 ]
+        then
+            source env/bin/activate
+        else
+            source "${1%/}/bin/activate"
+    fi
+}
+
+
 alias deac='deactivate'
 
 ## PyPy
