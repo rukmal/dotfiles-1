@@ -56,14 +56,12 @@ alias py3='python3'
 
 # Virtualenv
 alias makevenv3='virtualenv -p python3 --distribute env'
-alias venv='source env/bin/activate'
-alias deac='deactivate'
 
 # PyPi3
 alias pypisubmit3='python3 setup.py register -r pypi'
 
-alias pypiupdate='python3 setup.py sdist upload'
-alias pypiupload='pypiupdate'
+alias pypiupdate3='python3 setup.py sdist upload'
+alias pypiupload3='pypiupdate3'
 
 # pip3
 function pipupdate3() {
