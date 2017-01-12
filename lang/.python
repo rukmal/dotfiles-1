@@ -4,8 +4,14 @@
 alias py='python'
 
 # Virtualenv
-alias makevenv='virtualenv --distribute env'
-alias startvenv='virtualenv --distribute env'
+function makevenv() {
+    if [ $# -eq 0 ]
+        then
+            virtualenv --distribute env
+        else
+            virtualenv --distribute $1
+    fi
+}
 
 function venv() {
     if [ $# -eq 0 ]
@@ -64,7 +70,14 @@ alias pipinst='pipinstall'
 alias py3='python3'
 
 # Virtualenv
-alias makevenv3='virtualenv -p python3 --distribute env'
+function makevenv() {
+    if [ $# -eq 0 ]
+        then
+            virtualenv -p python3 --distribute env
+        else
+            virtualenv -p python3 --distribute $1
+    fi
+}
 
 # PyPi3
 alias pypisubmit3='python3 setup.py register -r pypi'
