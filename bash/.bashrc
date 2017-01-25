@@ -116,9 +116,13 @@ alias gid='git diff'
 alias gia='git add -A'
 alias gih='git push dokku master'
 alias gil='git pull'
+
+alias gipa='git remote | xargs -L1 git push'
+alias gibr='git branch'
+alias gich='git checkout'
+
 alias gipset='git push --set-upstream origin master'
 alias setgip='git push --set-upstream origin master'
-alias gipa='git remote | xargs -L1 git push'
 
 function gip() {
     git add -A
