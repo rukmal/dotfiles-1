@@ -108,3 +108,6 @@ function pipinstall3() {
 }
 alias pipi3='pip3 install'
 alias pipinst3='pipinstall3'
+
+# added by Pew
+source $(pew shell_config)
