@@ -1,25 +1,5 @@
-# ==========================================
-# Includes
-# ==========================================
 if [ -f /etc/bashrc ]; then
   . /etc/bashrc
-fi
-
-### Custom
-for i in ~/.dotfiles ~/dotfiles; do
-    if [ -d "$i" ]; then
-        for f in `find "$i" -not -type d`; do
-           source $f
-        done
-    fi
-done
-
-if [ -f ~/.custom ]; then
-    source ~/.custom
-fi
-
-if [ -f ~/.other ]; then
-    source ~/.other
 fi
 
 # ==========================================
@@ -229,3 +209,22 @@ export GREP_OPTIONS='--color=auto'
 export PATH=/usr/local/bin:$PATH
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# ==========================================
+# Includes
+# ==========================================
+for i in ~/.dotfiles ~/dotfiles; do
+    if [ -d "$i" ]; then
+        for f in `find "$i" -not -type d`; do
+           source $f
+        done
+    fi
+done
+
+if [ -f ~/.custom ]; then
+    source ~/.custom
+fi
+
+if [ -f ~/.other ]; then
+    source ~/.other
+fi
